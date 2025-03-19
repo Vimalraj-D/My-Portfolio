@@ -3,847 +3,584 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vimalraj-D_Portfolio</title>
+    <meta name="description" content="Vimalraj D - Machine Learning Engineer and Deep Learning Specialist Portfolio">
+    <meta name="keywords" content="Machine Learning, Deep Learning, AI, Data Science, Portfolio">
     <link rel="icon" type="image/png" href="logo1.png">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
-    <style>
-        :root {
-            --neon-primary: #0ff;
-            --neon-secondary: #f0f;
-            --neon-tertiary: #ff0;
-            --background: #080818;
-            --card: #101028;
-            --text: #ffffff;
-            --gradient: linear-gradient(45deg, var(--neon-primary), var(--neon-secondary));
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', sans-serif;
-        }
-
-        body {
-            background-color: var(--background);
-            color: var(--text);
-            overflow-x: hidden;
-            min-height: 100vh;
-            padding-bottom: 80px;
-        }
-
-        .cyber-grid {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: 
-                linear-gradient(transparent 0%, rgba(0,255,255,0.05) 2%, transparent 3%),
-                linear-gradient(90deg, transparent 0%, rgba(0,255,255,0.05) 2%, transparent 3%);
-            background-size: 50px 50px;
-            pointer-events: none;
-            z-index: 1;
-        }
-
-        .glitch-wrapper {
-            position: relative;
-            display: inline-block;
-        }
-
-        .glitch {
-            position: relative;
-            animation: glitch 1s infinite;
-        }
-
-        @keyframes glitch {
-            0% { transform: translate(0) }
-            20% { transform: translate(-2px, 2px) }
-            40% { transform: translate(-2px, -2px) }
-            60% { transform: translate(2px, 2px) }
-            80% { transform: translate(2px, -2px) }
-            100% { transform: translate(0) }
-        }
-
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 2rem;
-            position: relative;
-            z-index: 2;
-        }
-
-        .profile-container {
-            display: flex;
-            gap: 4rem;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            background: rgba(16, 16, 40, 0.7);
-            padding: 3rem;
-            border-radius: 20px;
-            box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(0, 255, 255, 0.1);
-        }
-
-        .profile-image {
-            width: 300px;
-            height: 300px;
-            border-radius: 10px;
-            object-fit: cover;
-            position: relative;
-            border: 2px solid var(--neon-primary);
-            animation: borderPulse 4s infinite;
-        }
-
-        @keyframes borderPulse {
-            0%, 100% { border-color: var(--neon-primary); }
-            50% { border-color: var(--neon-secondary); }
-        }
-
-        .profile-content {
-            max-width: 600px;
-        }
-
-        .name {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            background: var(--gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: gradientFlow 8s linear infinite;
-        }
-
-        @keyframes gradientFlow {
-            0% { filter: hue-rotate(0deg); }
-            100% { filter: hue-rotate(360deg); }
-        }
-
-        .title {
-            font-size: 1.5rem;
-            color: var(--neon-primary);
-            margin-bottom: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-        }
-
-        .typing-title {
-            position: relative;
-            color: var(--neon-primary);
-            margin-bottom: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            height: 2em;
-            line-height: 1.5;
-        }
-
-        .typing-title::after {
-            content: '|';
-            position: absolute;
-            right: -8px;
-            width: 8px;
-            color: var(--neon-primary);
-            background: var(--neon-primary);
-            animation: cursor-blink 1s infinite;
-        }
-
-        @keyframes cursor-blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0; }
-        }
-
-        .hidden-titles {
-            display: none;
-        }
-
-        .description {
-            line-height: 1.8;
-            margin-bottom: 2rem;
-            text-shadow: 0 0 10px rgba(255,255,255,0.3);
-        }
-
-        .skills-section {
-            padding: 4rem 2rem;
-            position: relative;
-            z-index: 2;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: var(--neon-primary);
-            text-transform: uppercase;
-            letter-spacing: 4px;
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .skill-card {
-            background: var(--card);
-            padding: 2rem;
-            border-radius: 15px;
-            transition: all 0.3s;
-            border: 1px solid rgba(0, 255, 255, 0.1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .skill-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, transparent, rgba(0, 255, 255, 0.1), transparent);
-            transform: translateX(-100%);
-            transition: 0.5s;
-        }
-
-        .skill-card:hover::before {
-            transform: translateX(100%);
-        }
-
-        .skill-title {
-            font-size: 1.25rem;
-            margin-bottom: 1rem;
-            color: var(--neon-primary);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .nav-container {
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            z-index: 1000;
-            background: rgba(8, 8, 24, 0.9);
-            backdrop-filter: blur(10px);
-            border-top: 1px solid rgba(0, 255, 255, 0.1);
-        }
-
-        .nav-links {
-            display: flex;
-            justify-content: center;
-            gap: 3rem;
-            padding: 1rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .nav-link {
-            color: var(--text);
-            text-decoration: none;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            padding: 0.5rem 1.5rem;
-            position: relative;
-            transition: all 0.3s;
-        }
-
-        .nav-link::before {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background: var(--gradient);
-            transform: scaleX(0);
-            transition: transform 0.3s;
-        }
-
-        .nav-link:hover::before {
-            transform: scaleX(1);
-        }
-
-        .cursor {
-            width: 20px;
-            height: 20px;
-            border: 2px solid var(--neon-primary);
-            border-radius: 50%;
-            position: fixed;
-            pointer-events: none;
-            z-index: 9999;
-            mix-blend-mode: difference;
-        }
-
-        .cursor-inner {
-            width: 6px;
-            height: 6px;
-            background: var(--neon-secondary);
-            border-radius: 50%;
-            position: fixed;
-            pointer-events: none;
-            z-index: 9999;
-            mix-blend-mode: difference;
-        }
-
-        .cursor-trail {
-            width: 4px;
-            height: 4px;
-            position: fixed;
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: 9998;
-            opacity: 0.5;
-            mix-blend-mode: difference;
-        }
-
-        @media (max-width: 768px) {
-            .profile-container {
-                flex-direction: column;
-                text-align: center;
-                padding: 2rem;
-            }
-
-            .profile-image {
-                width: 200px;
-                height: 200px;
-            }
-
-            .name {
-                font-size: 2.5rem;
-            }
-
-            .nav-links {
-                gap: 1rem;
-            }
-
-            .nav-link {
-                padding: 0.5rem;
-                font-size: 0.9rem;
-            }
-        }
-
-        .contact-links-section {
-    min-height: 100vh;
-    padding: 6rem 2rem;
-    position: relative;
-    overflow: hidden;
-    background: var(--background);
-}
-
-.contact-cards-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
-    position: relative;
-    z-index: 2;
-}
-
-.contact-card {
-    position: relative;
-    background: rgba(16, 16, 40, 0.7);
-    border-radius: 15px;
-    padding: 2rem;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(0, 255, 255, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.contact-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
-}
-
-.card-content {
-    position: relative;
-    z-index: 2;
-}
-
-.card-icon {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 1.5rem;
-    position: relative;
-    color: var(--neon-primary);
-}
-
-.icon-svg {
-    width: 100%;
-    height: 100%;
-}
-
-.card-title {
-    color: var(--neon-primary);
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-.card-detail {
-    color: var(--text);
-    margin-bottom: 2rem;
-    font-family: 'Courier New', monospace;
-    opacity: 0.8;
-}
-
-.card-button {
-    display: inline-block;
-    padding: 0.8rem 1.5rem;
-    color: var(--neon-primary);
-    text-decoration: none;
-    border: 1px solid var(--neon-primary);
-    border-radius: 5px;
-    position: relative;
-    overflow: hidden;
-    transition: color 0.3s;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 0.9rem;
-}
-
-.card-button:hover {
-    color: var(--background);
-}
-
-.button-glitch {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--neon-primary);
-    transform: translateX(-100%);
-    transition: transform 0.3s;
-}
-
-.card-button:hover .button-glitch {
-    transform: translateX(0);
-}
-
-.card-circuits {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    pointer-events: none;
-    opacity: 0.1;
-}
-
-/* Circuit pattern animation */
-.card-circuits::before,
-.card-circuits::after {
-    content: '';
-    position: absolute;
-    width: 200%;
-    height: 200%;
-    top: -50%;
-    left: -50%;
-    background-image: 
-        radial-gradient(circle at 30% 50%, rgba(0,255,255,0.1) 1px, transparent 1px),
-        radial-gradient(circle at 70% 50%, rgba(0,255,255,0.1) 1px, transparent 1px);
-    background-size: 30px 30px;
-    animation: circuitMove 20s linear infinite;
-}
-
-.card-circuits::after {
-    animation-direction: reverse;
-    animation-duration: 15s;
-}
-
-@keyframes circuitMove {
-    0% { transform: translateX(0) translateY(0) rotate(0deg); }
-    100% { transform: translateX(-50px) translateY(-50px) rotate(360deg); }
-}
-
-/* Card type-specific hover effects */
-.contact-card[data-type="email"]:hover {
-    border-color: var(--neon-primary);
-}
-
-.contact-card[data-type="linkedin"]:hover {
-    border-color: #0077b5;
-}
-
-.contact-card[data-type="github"]:hover {
-    border-color: #6e5494;
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-    .contact-cards-container {
-        grid-template-columns: 1fr;
-        padding: 1rem;
-    }
-
-    .contact-card {
-        padding: 1.5rem;
-    }
-}
-
-/* Hover state animations for icons */
-.card-icon {
-    transition: transform 0.3s;
-}
-
-.contact-card:hover .card-icon {
-    transform: scale(1.1) rotate(5deg);
-}
-
-/* Loading animation for icons */
-.icon-svg path {
-    stroke-dasharray: 50;
-    stroke-dashoffset: 50;
-    animation: drawIcon 1.5s ease forwards;
-}
-
-@keyframes drawIcon {
-    to {
-        stroke-dashoffset: 0;
-    }
-}
-
-    </style>
+    <title>Vimalraj D - ML Engineer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Added favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="cyber-grid"></div>
-    <div class="cursor"></div>
-    <div class="cursor-inner"></div>
-
-    <section class="hero" id="home">
-        <div class="profile-container">
-            <img src="img4.jpg" alt="Profile Image" class="profile-image">
-            <div class="profile-content">
-                <h1 class="name glitch">VIMALRAJ D</h1>
-                <h2 class="typing-title"></h2>
-                <!-- Hidden container for titles -->
-                <div class="hidden-titles">
-                    <span>AI Research Engineer</span>
-                    <span>Neural Systems Architect</span>
-                    <span>Quantum ML Specialist</span>
-                    <span>Deep Learning Pioneer</span>
-                    <span>AI Ethics Researcher</span>
-                    <span>Machine Learning Expert</span>
-                </div>
-                <p class="description">
-                    Pioneering the future of artificial intelligence through innovative research and development. 
-                    Specializing in neural architecture design, quantum machine learning, and cognitive computing systems.
-                </p>
-            </div>
+<!-- Home Page Section -->
+<div class="home-page">
+    <div class="image-container">
+        <div class="hero">
+            <h1>VIMALRAJ D</h1>
+            <p id="typing-text"></p> <!-- Typing Effect Container -->
         </div>
-    </section>
+        <img src="mine-removebg-preview.png" alt="Your Image">
+    </div>
+</div>
+    <div class="container">
 
-    <section class="skills-section" id="skills">
-        <h2 class="section-title">Neural Networks</h2>
-        <div class="skills-grid">
-            <div class="skill-card" data-tilt>
-                <h3 class="skill-title">Machine Learning</h3>
-                <p>I analyze data, build models, and develop intelligent systems that can learn and make predictions.</p>
-            </div>
-            <div class="skill-card" data-tilt>
-                <h3 class="skill-title">Deep Learning</h3>
-                <p>I design and train neural networks to solve complex problems like image recognition and natural language processing.</p>
-            </div>
-            <div class="skill-card" data-tilt>
-                <h3 class="skill-title">AI Research</h3>
-                <p>Leading research in emerging AI fields including self-supervised learning and neural architecture search.</p>
-            </div>
-        </div>
-    </section>
-    <section class="contact-links-section" id="contact">
-        <div class="cyber-grid"></div>
-        <h2 class="section-title">Neural Links</h2>
-        
-        <div class="contact-cards-container">
-            <!-- Email Card -->
-            <div class="contact-card" data-type="email">
-                <div class="card-content">
-                    <div class="card-icon">
-                        <svg viewBox="0 0 24 24" class="icon-svg">
-                            <path d="M3 8L10.89 13.94C11.52 14.34 12.48 14.34 13.11 13.94L21 8M5 19H19C20.1046 19 21 18.1046 21 17V7C21 5.89543 20.1046 5 19 5H5C3.89543 5 3 5.89543 3 7V17C3 18.1046 3.89543 19 5 19Z" 
-                                  stroke="currentColor" 
-                                  fill="none" 
-                                  stroke-width="2" 
-                                  stroke-linecap="round" 
-                                  stroke-linejoin="round"/>
-                        </svg>
+
+        <main>
+            <!-- About with enhanced structure -->
+            <section id="about" class="section">
+                <div class="section-header">
+                    <h2 class="heading">About Me</h2>
+                    <span class="heading-accent"></span>
+                  </div>
+                <div class="about-container">
+                    <div class="about-content">
+                        <i class="fas fa-brain icon-inline"></i>
+                        <p>I'm a passionate Machine Learning Engineer specializing in deep learning and computer vision. With expertise in PyTorch, OpenCV, and NLP, I craft scalable AI solutions—from recommendation systems to real-time object detection. Currently pursuing a B.E. in Computer Science (AI & ML), I’m dedicated to driving innovation and delivering impactful results.</p>
+                        <div class="stats">
+                            <div class="stat-item"><span>5+</span> Projects</div>
+                            <div class="stat-item"><span>1+</span> Years Experience</div>
+                            <div class="stat-item"><span>3</span> Certifications</div>
+                        </div>
                     </div>
-                    <h3 class="card-title">Neural Transmission</h3>
-                    <p class="card-detail">vimalrajnov172005@gmail.com</p>
-                    <a href="mailto:vimalrajnov172005@gmail.com" class="card-button">
-                        <span>Initialize Contact</span>
-                        <div class="button-glitch"></div>
-                    </a>
                 </div>
-                <div class="card-circuits"></div>
-            </div>
-    
-            <!-- LinkedIn Card -->
-            <div class="contact-card" data-type="linkedin">
-                <div class="card-content">
-                    <div class="card-icon">
-                        <svg viewBox="0 0 24 24" class="icon-svg">
-                            <path d="M16 8C17.5913 8 19.1174 8.63214 20.2426 9.75736C21.3679 10.8826 22 12.4087 22 14V21H18V14C18 13.4696 17.7893 12.9609 17.4142 12.5858C17.0391 12.2107 16.5304 12 16 12C15.4696 12 14.9609 12.2107 14.5858 12.5858C14.2107 12.9609 14 13.4696 14 14V21H10V14C10 12.4087 10.6321 10.8826 11.7574 9.75736C12.8826 8.63214 14.4087 8 16 8Z M2 9H6V21H2V9Z M4 6C5.10457 6 6 5.10457 6 4C6 2.89543 5.10457 2 4 2C2.89543 2 2 2.89543 2 4C2 5.10457 2.89543 6 4 6Z" 
-                                  stroke="currentColor" 
-                                  fill="none" 
-                                  stroke-width="2" 
-                                  stroke-linecap="round" 
-                                  stroke-linejoin="round"/>
-                        </svg>
+            </section>
+
+            <!-- Skills with progress bars -->
+            <section id="skills" class="section">
+                <div class="section-header">
+                    <h2 class="heading">Technical Skills</h2>
+                    <span class="heading-accent"></span>
+                  </div>
+                  
+                  <div class="skills-container">
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <div class="skill-icon-container">
+                              <i class="fas fa-copyright"></i>
+                            </div>
+                            <div class="skill-info">
+                              <h3 class="skill-name">C Programming</h3>
+                              <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="95">
+                                  <span class="skill-level-text">90%</span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="skill-hover-info">
+                              <p>Logical Implementation</p>
+                              <p>Structured Programming</p>
+                            </div>
+                          </div>
+                        <div class="skill-card">
+                            <div class="skill-icon-container">
+                              <i class="fas fa-code"></i>
+                            </div>
+                            <div class="skill-info">
+                              <h3 class="skill-name">HTML & CSS</h3>
+                              <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="90">
+                                  <span class="skill-level-text">90%</span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="skill-hover-info">
+                              <p>Web Page Creation</p>
+                              <p>Intermediate Interactive Styling</p>
+                            </div>
+                          </div>
+                          <div class="skill-card">
+                            <div class="skill-icon-container">
+                              <i class="fab fa-java"></i>
+                            </div>
+                            <div class="skill-info">
+                              <h3 class="skill-name">Java</h3>
+                              <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="85">
+                                  <span class="skill-level-text">95%</span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="skill-hover-info">
+                              <p>OOPs Concepts</p>
+                              <p>Advanced Concepts</p>
+                            </div>
+                          </div>
+                          <div class="skill-card">
+                            <div class="skill-icon-container">
+                              <i class="fas fa-database"></i>
+                            </div>
+                            <div class="skill-info">
+                              <h3 class="skill-name">DSA</h3>
+                              <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="75">
+                                  <span class="skill-level-text">75%</span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="skill-hover-info">
+                              <p>Basic Algorithms & Concepts</p>
+                              <p>Space & Time Complexity</p>
+                            </div>
+                          </div>
+                      <!-- Python Skill Card -->
+                      <div class="skill-card">
+                        <div class="skill-icon-container">
+                          <i class="fab fa-python"></i>
+                        </div>
+                        <div class="skill-info">
+                          <h3 class="skill-name">Python</h3>
+                          <div class="skill-bar-container">
+                            <div class="skill-bar" data-level="95">
+                              <span class="skill-level-text">95%</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="skill-hover-info">
+                          <p>Neural Network Implementation</p>
+                          <p>Data Processing Pipelines</p>
+                        </div>
+                      </div>
+                      
+                      <!-- PyTorch Skill Card -->
+                      <div class="skill-card">
+                        <div class="skill-icon-container">
+                          <i class="fas fa-fire"></i>
+                        </div>
+                        <div class="skill-info">
+                          <h3 class="skill-name">PyTorch</h3>
+                          <div class="skill-bar-container">
+                            <div class="skill-bar" data-level="90">
+                              <span class="skill-level-text">90%</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="skill-hover-info">
+                          <p>Custom Layer Architecture</p>
+                          <p>Transfer Learning</p>
+                        </div>
+                      </div>
+                      
+                      <!-- OpenCV Skill Card -->
+                      <div class="skill-card">
+                        <div class="skill-icon-container">
+                          <i class="fas fa-camera"></i>
+                        </div>
+                        <div class="skill-info">
+                          <h3 class="skill-name">OpenCV</h3>
+                          <div class="skill-bar-container">
+                            <div class="skill-bar" data-level="85">
+                              <span class="skill-level-text">85%</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="skill-hover-info">
+                          <p>Computer Vision Algorithms</p>
+                          <p>Image Processing</p>
+                        </div>
+                      </div>
+                      
+                      <!-- Deep Learning Skill Card -->
+                      <div class="skill-card">
+                        <div class="skill-icon-container">
+                          <i class="fas fa-network-wired"></i>
+                        </div>
+                        <div class="skill-info">
+                          <h3 class="skill-name">Deep Learning</h3>
+                          <div class="skill-bar-container">
+                            <div class="skill-bar" data-level="90">
+                              <span class="skill-level-text">90%</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="skill-hover-info">
+                          <p>Transformer Architecture</p>
+                          <p>Attention Mechanisms</p>
+                        </div>
+                      </div>
+                      
+                      <!-- Flask Skill Card -->
+                      <div class="skill-card">
+                        <div class="skill-icon-container">
+                          <i class="fas fa-server"></i>
+                        </div>
+                        <div class="skill-info">
+                          <h3 class="skill-name">Flask</h3>
+                          <div class="skill-bar-container">
+                            <div class="skill-bar" data-level="80">
+                              <span class="skill-level-text">80%</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="skill-hover-info">
+                          <p>API Endpoint Design</p>
+                          <p>Model Deployment</p>
+                        </div>
+                      </div>
+                      
+                      <!-- NLP Skill Card -->
+                      <div class="skill-card">
+                        <div class="skill-icon-container">
+                          <i class="fas fa-language"></i>
+                        </div>
+                        <div class="skill-info">
+                          <h3 class="skill-name">NLP</h3>
+                          <div class="skill-bar-container">
+                            <div class="skill-bar" data-level="85">
+                              <span class="skill-level-text">85%</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="skill-hover-info">
+                          <p>LLM Fine-tuning</p>
+                          <p>Embedding Visualization</p>
+                        </div>
+                      </div>
+                      <div class="skill-card">
+                        <div class="skill-icon-container">
+                          <i class="fas fa-cogs"></i>  <!-- Gen AI Icon -->
+                        </div>
+                        <div class="skill-info">
+                          <h3 class="skill-name">Generative AI</h3>
+                          <div class="skill-bar-container">
+                            <div class="skill-bar" data-level="90">
+                              <span class="skill-level-text">90%</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="skill-hover-info">
+                          <p>AI Content Creation</p>
+                          <p>Deep Learning Models</p>
+                        </div>
+                      </div>
+                      
+                      <div class="skill-card">
+                        <div class="skill-icon-container">
+                          <i class="fas fa-robot"></i>  <!-- Agentic AI Icon -->
+                        </div>
+                        <div class="skill-info">
+                          <h3 class="skill-name">Agentic AI</h3>
+                          <div class="skill-bar-container">
+                            <div class="skill-bar" data-level="85">
+                              <span class="skill-level-text">85%</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="skill-hover-info">
+                          <p>Autonomous Decision Making</p>
+                          <p>Multi-Agent Systems</p>
+                        </div>
+                      </div>
+                      
                     </div>
-                    <h3 class="card-title">Neural Network</h3>
-                    <p class="card-detail">linkedin.com/in/vimalraj-d</p>
-                    <a href="https://www.linkedin.com/in/vimalraj-d-8278972a5?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bm2hPN6ScSaqY%2FroHnumVYQ%3D%3D" target="_blank" class="card-button">
-                        <span>Connect Network</span>
-                        <div class="button-glitch"></div>
-                    </a>
-                </div>
-                <div class="card-circuits"></div>
-            </div>
-    
-            <!-- GitHub Card -->
-            <div class="contact-card" data-type="github">
-                <div class="card-content">
-                    <div class="card-icon">
-                        <svg viewBox="0 0 24 24" class="icon-svg">
-                            <path d="M9 19C4 20.5 4 16.5 2 16M16 22V18.13C16.0375 17.6532 15.9731 17.1738 15.811 16.7238C15.6489 16.2738 15.3929 15.8634 15.06 15.52C18.2 15.17 21.5 13.98 21.5 8.52C21.4997 7.12383 20.9627 5.7812 20 4.77C20.4559 3.54851 20.4236 2.19835 19.91 1C19.91 1 18.73 0.650001 16 2.48C13.708 1.85882 11.292 1.85882 9 2.48C6.27 0.650001 5.09 1 5.09 1C4.57638 2.19835 4.54414 3.54851 5 4.77C4.03013 5.7887 3.49252 7.14346 3.5 8.55C3.5 13.97 6.8 15.16 9.94 15.55C9.611 15.89 9.35726 16.2954 9.19531 16.7399C9.03335 17.1844 8.96681 17.6581 9 18.13V22" 
-                                  stroke="currentColor" 
-                                  fill="none" 
-                                  stroke-width="2" 
-                                  stroke-linecap="round" 
-                                  stroke-linejoin="round"/>
-                        </svg>
-                    </div>
-                    <h3 class="card-title">Code Repository</h3>
-                    <p class="card-detail">github.com/Vimalraj-D</p>
-                    <a href="https://github.com/Vimalraj-D" target="_blank" class="card-button">
-                        <span>Access Repository</span>
-                        <div class="button-glitch"></div>
-                    </a>
-                </div>
-                <div class="card-circuits"></div>
-            </div>
-        </div>
-    </section>
+                  </div>
+            </section>
 
-    <nav class="nav-container">
-        <div class="nav-links">
-            <a href="#home" class="nav-link">Neural Core</a>
-            <a href="#skills" class="nav-link">Networks</a>
-            <a href="#projects" class="nav-link">Projects</a>
-            <a href="#contact" class="nav-link">Connect</a>
-        </div>
-    </nav>
-
-    <script>
-        // Initialize tilt effect
-        VanillaTilt.init(document.querySelectorAll(".skill-card"), {
-            max: 15,
-            speed: 400,
-            glare: true,
-            "max-glare": 0.5,
-        });
-
-        // Custom cursor effect
-        const cursor = document.querySelector('.cursor');
-        const cursorInner = document.querySelector('.cursor-inner');
-        let cursorX = 0;
-        let cursorY = 0;
-        let innerX = 0;
-        let innerY = 0;
-
-        document.addEventListener('mousemove', e => {
-            cursorX = e.clientX;
-            cursorY = e.clientY;
-
-            // Create trail effect
-            const trail = document.createElement('div');
-            trail.className = 'cursor-trail';
-            trail.style.left = cursorX + 'px';
-            trail.style.top = cursorY + 'px';
-            trail.style.background = `hsl(${Math.random() * 360}, 100%, 50%)`;
-            document.body.appendChild(trail);
-
-            setTimeout(() => {
-                trail.style.opacity = '0';
-                setTimeout(() => trail.remove(), 200);
-            }, 100);
-        });
-
-        function animate() {
-            // Smooth cursor movement
-            let dx = cursorX - innerX;
-            let dy = cursorY - innerY;
-            innerX += dx * 0.1;
-            innerY += dy * 0.1;
-
-            cursor.style.left = cursorX + 'px';
-            cursor.style.top = cursorY + 'px';
-            cursorInner.style.left = innerX + 'px';
-            cursorInner.style.top = innerY + 'px';
-
-            requestAnimationFrame(animate);
-        }
-        animate();
-
-        // Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Parallax effect on scroll
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const parallaxElements = document.querySelectorAll('.skill-card');
-            
-            parallaxElements.forEach(element => {
-                const speed = 0.1;
-                element.style.transform = `translateY(${scrolled * speed}px)`;
-            });
-        });
-
-        class TypingAnimation {
-            constructor(element, titles, options = {}) {
-                this.element = element;
-                this.titles = titles;
-                this.waitTime = options.waitTime || 2000;
-                this.typeSpeed = options.typeSpeed || 100;
-                this.deleteSpeed = options.deleteSpeed || 50;
-                this.currentTitleIndex = 0;
-                this.isDeleting = false;
-                this.text = '';
-                this.tick();
-            }
-
-            tick() {
-                const currentTitle = this.titles[this.currentTitleIndex];
+            <!-- Projects with filter -->
+            <section id="projects" class="section">
+                <div class="section-header">
+                    <h2 class="heading">Projects</h2>
+                    <span class="heading-accent"></span>
+                  </div>
                 
-                if (this.isDeleting) {
-                    // Remove characters
-                    this.text = currentTitle.substring(0, this.text.length - 1);
-                } else {
-                    // Add characters
-                    this.text = currentTitle.substring(0, this.text.length + 1);
-                }
+                <div class="project-filters">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="ML">Machine Learning</button>
+                    <button class="filter-btn" data-filter="CV">Computer Vision</button>
+                    <button class="filter-btn" data-filter="NLP">NLP</button>
+                    <button class="filter-btn" data-filter="Deployed">Deployed</button>
+                </div>
+                
+                <div class="projects-container">
+                    <!-- Project 1 -->
+                    <article class="project-item" data-tech="Python, Scikit-Learn, Flask, Pandas, HTML&CSS, JavaScript" style="--delay: 1">
+                        <div class="neural-nodes"></div>
+                        <h3><i class="fas fa-book"></i> Book Recommendation System</h3>
+                        <p>Built an intelligent recommendation engine leveraging collaborative filtering and content-based algorithms to suggest personalized book recommendations based on user preferences and reading patterns.</p>
+                        <div class="tech-stack">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Scikit-Learn</span>
+                            <span class="tech-badge">Flask</span>
+                            <span class="tech-badge">Pandas</span>
+                            <span class="tech-badge">HTML/CSS</span>
+                            <span class="tech-badge">JavaScript</span>
+                        </div>
+                        <div class="project-showcase">
+                            <i class="fas fa-book-reader showcase-icon"></i>
+                        </div>
+                        <button class="project-cta">
+                            <i class="fas fa-eye"></i> View Details
+                        </button>
+                    </article>
+                    
+                    <!-- Project 2 -->
+                    <article class="project-item" data-tech="Python, OpenCV, YOLO" style="--delay: 2">
+                        <div class="neural-nodes"></div>
+                        <h3><i class="fas fa-camera"></i> Face Detection Using OpenCV</h3>
+                        <p>Implemented a real-time multi-facial recognition system with computer vision algorithms capable of identifying and tracking multiple faces simultaneously in dynamic environments.</p>
+                        <div class="tech-stack">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">OpenCV</span>
+                            <span class="tech-badge">YOLO</span>
+                            <span class="tech-badge">Image Processing</span>
+                            <span class="tech-badge">Object Detection</span>
+                        </div>
+                        <div class="project-showcase">
+                            <i class="fas fa-id-card showcase-icon"></i>
+                        </div>
+                        <button class="project-cta">
+                            <i class="fas fa-eye"></i> View Details
+                        </button>
+                    </article>
+                    
+                    <!-- Project 3 -->
+                    <article class="project-item" data-tech="Python, OpenCV, Tesseract OCR, NumPy, PyTorch, Streamlit" style="--delay: 3">
+                        <div class="neural-nodes"></div>
+                        <h3><i class="fas fa-file-alt"></i> Image Text Extraction</h3>
+                        <p>Developed an advanced OCR solution utilizing deep learning techniques to extract and process textual information from various image formats with high accuracy and minimal preprocessing requirements.</p>
+                        <div class="tech-stack">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">OpenCV</span>
+                            <span class="tech-badge">Tesseract OCR</span>
+                            <span class="tech-badge">NumPy</span>
+                            <span class="tech-badge">PyTorch</span>
+                            <span class="tech-badge">Streamlit</span>
+                        </div>
+                        <div class="project-showcase">
+                            <i class="fas fa-search showcase-icon"></i>
+                        </div>
+                        <button class="project-cta">
+                            <i class="fas fa-eye"></i> View Details
+                        </button>
+                    </article>
+                </div>
+            </section>
 
-                this.element.textContent = this.text;
+            <!-- Experience and Education remain structurally similar but styled better -->
+            <section class="section" id="experience">
+                <div class="section-header">
+                    <h2 class="heading">Experience</h2>
+                    <span class="heading-accent"></span>
+                  </div>
+                  <div class="timeline">
+                    <article class="experience-card left">
+                        <div class="shimmer-effect"></div>
+                        <div class="experience-header">
+                            <h3 class="experience-title">Machine Learning Intern</h3>
+                            <span class="experience-date">Sept 2024 - Oct 2024</span>
+                        </div>
+                        <p class="experience-company">Unified Mentor</p>
+                        <span class="experience-badge">Professional Experience</span>
+                        <p class="experience-description">
+                            Developed and optimized machine learning models for real-world applications. Applied deep learning 
+                            techniques, including CNN using PyTorch. Improved model accuracy and efficiency by tuning 
+                            hyperparameters and preprocessing data.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">PyTorch</span>
+                            <span class="tech-tag">CNN</span>
+                            <span class="tech-tag">Hyperparameter Tuning</span>
+                            <span class="tech-tag">Data Preprocessing</span>
+                        </div>
+                    </article>
+                </div>
 
-                let delta = this.isDeleting ? this.deleteSpeed : this.typeSpeed;
-
-                if (!this.isDeleting && this.text === currentTitle) {
-                    // Finished typing
-                    delta = this.waitTime;
-                    this.isDeleting = true;
-                } else if (this.isDeleting && this.text === '') {
-                    // Finished deleting
-                    this.isDeleting = false;
-                    this.currentTitleIndex = (this.currentTitleIndex + 1) % this.titles.length;
-                    delta = 500;
-                }
-
-                setTimeout(() => this.tick(), delta);
-            }
-        }
-
-        // Initialize typing animation
-        window.addEventListener('DOMContentLoaded', () => {
-            const titleElement = document.querySelector('.typing-title');
-            const titles = Array.from(document.querySelectorAll('.hidden-titles span')).map(span => span.textContent);
-            
-            new TypingAnimation(titleElement, titles, {
-                waitTime: 2000,    // Time to wait at complete words
-                typeSpeed: 100,    // Milliseconds between typing characters
-                deleteSpeed: 50    // Milliseconds between deleting characters
-            });
-        });
-
-        document.addEventListener('DOMContentLoaded', () => {
-    // Add hover animation for cards
-    const cards = document.querySelectorAll('.contact-card');
-    
-    cards.forEach(card => {
-        card.addEventListener('mousemove', (e) => {
-            const rect = card.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            
-            const centerX = rect.width / 2;
-            const centerY = rect.height / 2;
-            
-            const angleX = (y - centerY) / 20;
-            const angleY = (centerX - x) / 20;
-            
-            card.style.transform = `perspective(1000px) rotateX(${angleX}deg) rotateY(${angleY}deg) translateZ(10px)`;
-            
-            // Add glow effect
-            const glow = `0 0 20px rgba(0, 255, 255, ${Math.abs(angleX + angleY) / 20})`;
-            card.style.boxShadow = glow;
-        });
+                <!-- Neural Network Animation -->
+                <div class="neural-nodes" id="neural-animation"></div>
+            </section>
         
-        card.addEventListener('mouseleave', () => {
-            card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateZ(0)';
-            card.style.boxShadow = 'none';
-        });
-    });
     
-    // Add click animation for buttons
-    const buttons = document.querySelectorAll('.card-button');
-    
-    buttons.forEach(button => {
-        button.addEventListener('click', function(e) {
-            const ripple = document.createElement('div');
-            ripple.classList.add('ripple');
-            
-            const rect = button.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            
-            ripple.style.left = `${x}px`;
-            ripple.style.top = `${y}px`;
-            
-            button.appendChild(ripple);
-            
-            setTimeout(() => ripple.remove(), 1000);
-        });
-    });
-});
 
-// Add circuit pattern animation
-function createCircuitPattern() {
-    const cards = document.querySelectorAll('.card-circuits');
-    
-    cards.forEach(card => {
-        for(let i = 0; i < 20; i++) {
-            const line = document.createElement('div');
-            line.classList.add('circuit-line');
-            line.style.left = `${Math.random() * 100}%`;
-            line.style.top = `${Math.random() * 100}%`;
-            line.style.width = `${Math.random() * 50 + 20}px`;
-            line.style.transform = `rotate(${Math.random() * 360}deg)`;
-            card.appendChild(line);
-        }
-    });
-}
-
-// Initialize circuit patterns
-createCircuitPattern();
-
-    </script>
+            <section id="contact" class="section">
+                <div class="section-background">
+                    <div class="particles"></div>
+                    <div class="glow-circle"></div>
+                </div>
+                
+                <h2 class="animated-heading">Get in Touch</h2>
+                <p class="section-text fade-in">Let's collaborate on your next AI project and turn your vision into reality!</p>
+                
+                <div class="contact-grid">
+                    <div class="contact-details">
+                        <div class="contact-card" data-aos="fade-up">
+                            <div class="icon-container">
+                                <i class="fas fa-envelope pulse"></i>
+                                <span class="icon-glow"></span>
+                            </div>
+                            <div class="contact-info">
+                                <h3>Email</h3>
+                                <a href="mailto:vimalrajnov172005@gmail.com" class="highlight-link">
+                                    <span class="link-text">vimalrajnov172005@gmail.com</span>
+                                    <span class="link-hover-effect"></span>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-card" data-aos="fade-up" data-aos-delay="100">
+                            <div class="icon-container">
+                                <i class="fab fa-linkedin pulse"></i>
+                                <span class="icon-glow"></span>
+                            </div>
+                            <div class="contact-info">
+                                <h3>LinkedIn</h3>
+                                <a href="https://www.linkedin.com/in/vimalraj-d-8278972a5" target="_blank" class="highlight-link">
+                                    <span class="link-text">www.linkedin.com/in/vimalraj-d</span>
+                                    <span class="link-hover-effect"></span>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-card" data-aos="fade-up" data-aos-delay="200">
+                            <div class="icon-container">
+                                <i class="fab fa-github pulse"></i>
+                                <span class="icon-glow"></span>
+                            </div>
+                            <div class="contact-info">
+                                <h3>GitHub</h3>
+                                <a href="https://github.com/Vimalraj-D" target="_blank" class="highlight-link">
+                                    <span class="link-text">github.com/Vimalraj-D</span>
+                                    <span class="link-hover-effect"></span>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="connect-graphic">
+                            <div class="connector-line"></div>
+                            <div class="connector-dot"></div>
+                        </div>
+                    </div>
+                    
+                    <form id="contact-form" class="contact-form" action="process_form.php" method="post" data-aos="fade-left">
+                        <h3 class="form-heading">Send a Message</h3>
+                        
+                        <div class="form-group floating-input">
+                            <input type="text" id="name" name="name" placeholder=" " required>
+                            <label for="name">Your Name</label>
+                            <span class="highlight-bar"></span>
+                            <div class="field-icon">
+                                <i class="fas fa-user"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group floating-input">
+                            <input type="email" id="email" name="email" placeholder=" " required>
+                            <label for="email">Your Email</label>
+                            <span class="highlight-bar"></span>
+                            <div class="field-icon">
+                                <i class="fas fa-at"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group floating-input">
+                            <select id="subject" name="subject">
+                                <option value="" disabled selected></option>
+                                <option value="project">Project Inquiry</option>
+                                <option value="collaboration">Collaboration</option>
+                                <option value="question">General Question</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <label for="subject">Subject</label>
+                            <span class="highlight-bar"></span>
+                            <div class="field-icon">
+                                <i class="fas fa-bookmark"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group floating-input">
+                            <textarea id="message" name="message" rows="4" placeholder=" " required></textarea>
+                            <label for="message">Your Message</label>
+                            <span class="highlight-bar"></span>
+                            <div class="field-icon">
+                                <i class="fas fa-comment-alt"></i>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-icon">
+                                <i class="fas fa-paper-plane"></i>
+                            </span>
+                            <span class="btn-hover-effect"></span>
+                        </button>
+                        
+                        <div class="form-footer">
+                            <span>Usually respond within 12-24 hours</span>
+                            <div class="status-indicator">
+                                <span class="status-dot"></span>
+                                <span class="status-text">Available for work</span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="scrolling-text">
+                    <div class="text-wrapper">
+                        <span>COLLABORATE</span>
+                        <span>•</span>
+                        <span>CREATE</span>
+                        <span>•</span>
+                        <span>INNOVATE</span>
+                        <span>•</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+        <footer>
+            <p><i class="fas fa-copyright"></i> <span id="year"></span> Vimalraj D</p>
+            <div class="footer-links">
+                <!-- ... links unchanged ... -->
+            </div>
+        </footer>
+        <div class="options">
+            <nav aria-label="Neural Interface Navigation">
+              <ul>
+                <li >
+                  <a href="#about" >
+                    <div class="icon-container">
+                      <i class="fas fa-user"></i>
+                    </div>
+                    
+                  </a>
+                </li>
+                <li >
+                  <a href="#skills">
+                    <div class="icon-container">
+                      <i class="fas fa-tools"></i>
+                    </div>
+                    
+                  </a>
+                </li>
+                <li >
+                  <a href="#projects">
+                    <div class="icon-container">
+                      <i class="fas fa-project-diagram"></i>
+                    </div>
+                    
+                  </a>
+                </li>
+                <li >
+                  <a href="#experience">
+                    <div class="icon-container">
+                      <i class="fas fa-briefcase"></i>
+                    </div>
+                    
+                  </a>
+                </li>
+                <li >
+                  <a href="#contact">
+                    <div class="icon-container">
+                      <i class="fas fa-envelope"></i>
+                    </div>
+                    
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
