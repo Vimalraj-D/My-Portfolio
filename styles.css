@@ -144,6 +144,7 @@ body {
         margin-top: 300px;
         display: block;
         text-align: center;
+        margin-left:0px;
     }
     .hero h1{
         font-size: large;
