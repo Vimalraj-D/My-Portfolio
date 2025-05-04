@@ -6874,7 +6874,7 @@ html, body {
     position: relative;
     width: 85px;
     height: 85px;
-    background-color: #ffffff;
+    background-color: black;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -6936,7 +6936,7 @@ html, body {
     left: 15%;
     width: 25%;
     height: 25%;
-    background: rgba(255, 255, 255, 0.5);
+    background: black;
     border-radius: 50%;
     filter: blur(3px);
 }
@@ -7055,6 +7055,7 @@ transform: translateY(-3px);
         max-width: 95%;
         left: 50%;
         transform: translateX(-50%);
+        margin-left:none;
     }
     
     .dock-item {
@@ -7077,6 +7078,7 @@ transform: translateY(-3px);
         gap: 1px;
         border-radius: 4px;
         max-width: 70%;
+        margin-left:none;
     }
     
     .dock-item {
@@ -7108,7 +7110,7 @@ transform: translateY(-3px);
   position: relative;
   width: 85px;
   height: 85px;
-  background-color: #ffffff !important;
+  background-color:black;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -7122,12 +7124,12 @@ transform: translateY(-3px);
 @media (max-width: 480px) {
   .chatbot-popup {
     right: 50%;
-    transform: translateX(50%);
+    transform: translateX(0%);
     bottom: 60px;
   }
   
   .chatbot-popup:after {
     right: 50%;
-    transform: translateX(50%) rotate(45deg);
+    transform: translateX(0%) rotate(0deg);
   }
 }
