@@ -21,6 +21,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="fixes.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -862,17 +863,21 @@
                                             <p><a href="mailto:vimalrajd2005@gmail.com">vimalrajd2005@gmail.com</a></p>
                                         </div>
                                     </div>
-                                </address>
-                                
-                                <div class="download-cv-container">
-                                    <a href="VIMALRAJ D - Resume.pdf" class="download-cv-btn" download>
-                                        <div class="download-icon">
+                                    
+                                    <!-- Download CV Button -->
+                                    <div class="info-item download-cv">
+                                        <div class="info-icon" aria-hidden="true">
                                             <i class="fas fa-file-pdf"></i>
                                         </div>
-                                        <span>Download CV</span>
-                                        <i class="fas fa-download"></i>
-                                    </a>
-                                </div>
+                                        <div class="info-text">
+                                            <h4>Resume</h4>
+                                            <a href="VIMALRAJ D - Resume.pdf" download class="cv-download-btn">
+                                                <span>Download CV</span>
+                                                <i class="fas fa-download"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </address>
                             </div>
                             
                             <div class="social-links">
@@ -1018,10 +1023,14 @@
             
             <div class="social-galaxy">
                 <!-- LinkedIn -->
-                <a href="https://www.linkedin.com/in/vimalraj-d-8278972a5" target="_blank" rel="noopener" class="social-planet linkedin" aria-label="LinkedIn Profile">
-                    <div class="planet-body">
-                        <div class="planet-icon">
-                            <i class="fab fa-linkedin-in"></i>
+                <a href="https://linkedin.com/in/vimalraj-d" target="_blank" rel="noopener" class="social-planet linkedin" aria-label="LinkedIn Profile">
+                    <div class="planet-orbit">
+                        <div class="planet-ring"></div>
+                        <div class="planet-body">
+                            <div class="planet-glow"></div>
+                            <div class="planet-icon">
+                                <i class="fab fa-linkedin-in"></i>
+                            </div>
                         </div>
                     </div>
                     <div class="planet-name">LinkedIn</div>
@@ -1029,59 +1038,83 @@
 
                 <!-- GitHub -->
                 <a href="https://github.com/Vimalraj-D" target="_blank" rel="noopener" class="social-planet github" aria-label="GitHub Profile">
-                    <div class="planet-body">
-                        <div class="planet-icon">
-                            <i class="fab fa-github"></i>
+                    <div class="planet-orbit">
+                        <div class="planet-ring"></div>
+                        <div class="planet-body">
+                            <div class="planet-glow"></div>
+                            <div class="planet-icon">
+                                <i class="fab fa-github"></i>
+                            </div>
                         </div>
                     </div>
                     <div class="planet-name">GitHub</div>
                 </a>
 
                 <!-- Kaggle -->
-                <a href="https://www.kaggle.com/vimalrajduraisamy" target="_blank" rel="noopener" class="social-planet kaggle" aria-label="Kaggle Profile">
-                    <div class="planet-body">
-                        <div class="planet-icon">
-                            <i class="fab fa-kaggle"></i>
+                <a href="https://kaggle.com/vimalrajd" target="_blank" rel="noopener" class="social-planet kaggle" aria-label="Kaggle Profile">
+                    <div class="planet-orbit">
+                        <div class="planet-ring"></div>
+                        <div class="planet-body">
+                            <div class="planet-glow"></div>
+                            <div class="planet-icon">
+                                <i class="fab fa-kaggle"></i>
+                            </div>
                         </div>
                     </div>
                     <div class="planet-name">Kaggle</div>
                 </a>
 
                 <!-- HuggingFace -->
-                <a href="https://huggingface.co/Vimalraj-D" target="_blank" rel="noopener" class="social-planet huggingface" aria-label="HuggingFace Profile">
-                    <div class="planet-body">
-                        <div class="planet-icon">
-                            <i class="fas fa-robot"></i>
+                <a href="https://huggingface.co/vimalrajd" target="_blank" rel="noopener" class="social-planet huggingface" aria-label="HuggingFace Profile">
+                    <div class="planet-orbit">
+                        <div class="planet-ring"></div>
+                        <div class="planet-body">
+                            <div class="planet-glow"></div>
+                            <div class="planet-icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
                         </div>
                     </div>
                     <div class="planet-name">HuggingFace</div>
                 </a>
 
                 <!-- Instagram -->
-                <a href="https://www.instagram.com/vimalraj_nov17?igsh=MXRla3E2eG5xeWtxZA==" target="_blank" rel="noopener" class="social-planet instagram" aria-label="Instagram Profile">
-                    <div class="planet-body">
-                        <div class="planet-icon">
-                            <i class="fab fa-instagram"></i>
+                <a href="https://instagram.com/vimalraj_d" target="_blank" rel="noopener" class="social-planet instagram" aria-label="Instagram Profile">
+                    <div class="planet-orbit">
+                        <div class="planet-ring"></div>
+                        <div class="planet-body">
+                            <div class="planet-glow"></div>
+                            <div class="planet-icon">
+                                <i class="fab fa-instagram"></i>
+                            </div>
                         </div>
                     </div>
                     <div class="planet-name">Instagram</div>
                 </a>
 
                 <!-- X/Twitter -->
-                <a href="https://x.com/Vimal_17nov?t=8zNNwN74tbqoWByky9SfaA&s=09" target="_blank" rel="noopener" class="social-planet x-twitter" aria-label="X/Twitter Profile">
-                    <div class="planet-body">
-                        <div class="planet-icon">
-                            <i class="fab fa-x-twitter"></i>
+                <a href="https://x.com/vimalraj_d" target="_blank" rel="noopener" class="social-planet x-twitter" aria-label="X/Twitter Profile">
+                    <div class="planet-orbit">
+                        <div class="planet-ring"></div>
+                        <div class="planet-body">
+                            <div class="planet-glow"></div>
+                            <div class="planet-icon">
+                                <i class="fab fa-x-twitter"></i>
+                            </div>
                         </div>
                     </div>
                     <div class="planet-name">X</div>
                 </a>
 
                 <!-- Email -->
-                <a href="mailto:vimalrajnov172005@gmail.com" class="social-planet email" aria-label="Email Contact">
-                    <div class="planet-body">
-                        <div class="planet-icon">
-                            <i class="fas fa-envelope"></i>
+                <a href="mailto:vimalrajd2005@gmail.com" class="social-planet email" aria-label="Email Contact">
+                    <div class="planet-orbit">
+                        <div class="planet-ring"></div>
+                        <div class="planet-body">
+                            <div class="planet-glow"></div>
+                            <div class="planet-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
                         </div>
                     </div>
                     <div class="planet-name">Email</div>
