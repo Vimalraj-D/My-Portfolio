@@ -3257,7 +3257,7 @@ html, body {
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   position: relative;
   overflow: visible;
-  margin: 0 2px;
+  margin: 0 0px;
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
@@ -4884,7 +4884,7 @@ html, body {
         gap: 2px;
         padding: 4px 8px;
         border-radius: 8px;
-        max-width: 80%;
+        max-width: 98%;
     }
     
     .dock-item {
@@ -4991,8 +4991,8 @@ html, body {
         gap: 1px;
         padding: 3px 6px;
         border-radius: 5px;
-        width: auto;
-        max-width: 75%;
+        width:95%;
+        max-width: 95%;
         justify-content: space-around;
     }
     
@@ -5101,7 +5101,7 @@ html, body {
         bottom: 5px;
         gap: 1px;
         border-radius: 4px;
-        max-width: 70%;
+        max-width: 95%;
     }
     
     .dock-item {
@@ -7048,23 +7048,23 @@ transform: translateY(-3px);
     .mac-dock {
         bottom: 10px;
         gap: 3px;
-        padding: 6px 10px;
+        padding: 3px 5px;
         border-radius: 16px;
         max-width: 95%;
-        left: 50%;
+  
         transform: translateX(-50%);
         margin-left:none;
     }
     
     .dock-item {
-        width: 30px !important;
-        height: 30px !important;
+        width: 20px !important;
+        height: 20px !important;
         margin: 0 1px !important;
     }
     
     .dock-item svg {
-        width: 18px !important;
-        height: 18px !important;
+        width: 12px !important;
+        height: 12px !important;
     }
 }
 
@@ -7075,7 +7075,7 @@ transform: translateY(-3px);
         bottom: 5px;
         gap: 1px;
         border-radius: 4px;
-        max-width: 70%;
+        max-width: 90%;
         margin-left:none;
     }
     
