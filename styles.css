@@ -2863,34 +2863,33 @@ img {
 
 @media (max-width: 480px) {
   .container {
-    width: 95%;
-    padding: 0 10px;
+    width: 100%;
+  
   }
   
   .mac-dock {
       bottom: 15px;
-    gap: 4px;
-    padding: 4px 7px;
+    gap: 2px;
+    padding: 2px 4px;
       border-radius: 10px;
-    width: auto;
-    justify-content: space-around;
+    width: 95%;
   }
   
   .dock-item {
-      width: 30px;
-      height: 30px;
+      width: 20px;
+      height: 20px;
     border-radius: 50% !important;
   }
   
   .dock-item svg {
-      width: 10px;
-      height: 10px;
+      width: 8px;
+      height: 8px;
   }
   
   .chatbot-panel {
     right: 20%;
     transform: translateX(50%);
-    width: 50%;
+    width: 60%;
     max-width: none;
       bottom: 75px;
   }
