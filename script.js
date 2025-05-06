@@ -1575,7 +1575,7 @@ He's focusing on cutting-edge AI/ML curriculum and hands-on projects to build pr
         }
         // Check for experience-related queries
         else if (query.includes('experience') || query.includes('job') || query.includes('intern')) {
-            return `Vimalraj worked as a **Machine Learning Intern** at Unified Mentor (Sept-Oct 2024). 💼🔍 
+            return `Vimalraj worked as a **Machine Learning Intern** at CubeAI Solutions (Feb 2025 to Present). 💼🔍 
 
 During this role, he:
 • 🚀 Developed and optimized machine learning models for real-world applications
@@ -1683,12 +1683,12 @@ function initSocialPlanets() {
                 delay: 0.1 * index,
                 duration: 0.8,
                 ease: "back.out(1.7)"
-            });
-        } else {
+                    });
+                } else {
             // Fallback animation
             planet.style.opacity = "0";
             planet.style.transform = "translateY(30px)";
-            setTimeout(() => {
+                    setTimeout(() => {
                 planet.style.transition = "all 0.8s";
                 planet.style.opacity = "1";
                 planet.style.transform = "translateY(0)";
@@ -1708,9 +1708,9 @@ function initSocialPlanets() {
                 });
             } else {
                 planetRing.style.animation = `rotate ${randomDuration}s linear infinite`;
+                }
             }
-        }
-    });
+        });
 }
 
 // Enhanced skill cards animations
