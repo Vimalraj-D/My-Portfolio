@@ -4933,606 +4933,6 @@ html, body {
     }
 }
 
-/* Copyright Footer */
-.footer {
-    padding: 1.5rem 0;
-    background-color: rgba(10, 10, 15, 0.8);
-    text-align: center;
-    position: relative;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.copyright {
-    font-size: 0.9rem;
-    color: var(--color-text-muted);
-    margin: 0;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .skill-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .skill-tabs {
-        flex-wrap: wrap;
-    }
-    
-    .skill-tab {
-        padding: 0.6rem 1.2rem;
-        font-size: 0.9rem;
-    }
-    
-    .social-galaxy {
-        gap: 1.5rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .skill-tab {
-        flex: 1 0 auto;
-        text-align: center;
-        padding: 0.6rem 1rem;
-        font-size: 0.85rem;
-    }
-    
-    .skill-item {
-        padding: 1.2rem;
-    }
-}
-
-/* Rotation animation for planet rings */
-@keyframes rotate {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-
-
-/* Enhance Skills Section */
-.skill-item {
-    background: #0F0F0F;
-    border: 1px solid rgba(255, 1, 79, 0.1);
-    border-radius: 12px;
-    padding: 1.5rem;
-    transition: all 0.3s;
-    margin-bottom: 1.5rem;
-    position: relative;
-}
-
-.skill-item:hover {
-    transform: translateY(-5px);
-    border-color: rgba(255, 1, 79, 0.4);
-}
-
-.skill-item.featured {
-    border-color: rgba(255, 1, 79, 0.3);
-}
-
-.skill-info {
-    display: flex;
-    justify-content: space-between;
-}
-
-.skill-name {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.skill-name i {
-    color: var(--color-primary);
-    font-size: 1.2rem;
-}
-
-.skill-percent {
-    font-weight: 700;
-    color: var(--color-primary);
-}
-
-.skill-meter {
-    margin: 1rem 0;
-    position: relative;
-}
-
-.skill-progress {
-    height: 10px;
-    background: var(--color-primary);
-    border-radius: 10px;
-    transition: width 1s ease-in-out;
-}
-
-.skill-dots {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 5px;
-}
-
-.skill-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.3);
-}
-
-.skill-dot.active {
-    background: var(--color-primary);
-}
-
-.skill-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 1rem;
-}
-
-.skill-tag {
-    font-size: 0.75rem;
-    padding: 5px 12px;
-    border-radius: 20px;
-    background: rgba(255, 1, 79, 0.08);
-    color: var(--color-text);
-    font-weight: 500;
-    transition: all 0.3s;
-}
-
-.skill-tag:hover {
-    background: rgba(255, 1, 79, 0.15);
-}
-
-/* Copyright Section Styles */
-.copyright-section {
-    background-color: #000000;
-    padding: 2rem 0;
-    text-align: center;
-    border-top: 1px solid rgba(255, 1, 79, 0.1);
-    margin-bottom: 50px;
-}
-
-.copyright-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.copyright-text {
-    font-size: 1rem;
-    color: rgba(255, 255, 255, 0.7);
-    font-weight: 500;
-}
-
-.copyright-tagline {
-    font-size: 0.9rem;
-    color: var(--color-primary);
-    letter-spacing: 1px;
-}
-
-/* Improve Contact Info Section */
-.contact-info {
-    margin-top: 2.5rem;
-    background: rgba(15, 15, 15, 0.5);
-    border-radius: 16px;
-    padding: 1.5rem;
-    border: 1px solid rgba(255, 1, 79, 0.15);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-}
-
-.info-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1.5rem;
-    padding: 0.8rem;
-    border-radius: 12px;
-    background: rgba(26, 26, 26, 0.5);
-    transition: all 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.info-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    border-color: rgba(255, 1, 79, 0.2);
-}
-
-.info-item:last-child {
-    margin-bottom: 0;
-}
-
-.info-icon {
-    width: 50px;
-    height: 50px;
-    background: #ffffff;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 15px;
-    flex-shrink: 0;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-.info-icon i {
-    font-size: 1.5rem;
-}
-
-.info-text h4 {
-    font-size: 1.1rem;
-    color: var(--color-text);
-    margin-bottom: 5px;
-    font-weight: 600;
-}
-
-.info-text p,
-.info-text a {
-    font-size: 1rem;
-    color: var(--color-text-muted);
-    transition: color 0.3s;
-}
-
-.info-text a:hover {
-    color: var(--color-primary);
-    text-decoration: underline;
-}
-
-/* Completely Redesign Skills Section */
-.skills-section {
-    padding: 6rem 0;
-    position: relative;
-    background-color: var(--color-background);
-    overflow: hidden;
-}
-
-.skills-section::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle at center, rgba(255, 1, 79, 0.05), transparent 70%);
-    z-index: 0;
-}
-
-.skills-header {
-    text-align: center;
-    margin-bottom: 3rem;
-    position: relative;
-    z-index: 1;
-}
-
-.skills-main-title {
-    font-size: 2.8rem;
-    margin-bottom: 1rem;
-    color: var(--color-text);
-    position: relative;
-    display: inline-block;
-}
-
-.skills-main-title .highlight-gradient {
-    color: var(--color-primary);
-}
-
-.skills-description {
-    color: var(--color-text-muted);
-    max-width: 700px;
-    margin: 0 auto;
-    font-size: 1.1rem;
-}
-
-.skills-content {
-    position: relative;
-    z-index: 1;
-}
-
-.skills-category-tabs {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 2.5rem;
-    flex-wrap: wrap;
-}
-
-.skill-tab {
-    padding: 0.8rem 1.8rem;
-    background: rgba(26, 26, 26, 0.7);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: 30px;
-    color: var(--color-text-muted);
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.skill-tab:hover {
-    color: var(--color-text);
-    border-color: rgba(255, 1, 79, 0.3);
-}
-
-.skill-tab.active {
-    background: var(--color-primary);
-    color: white;
-    border-color: var(--color-primary);
-}
-
-.skill-category {
-    display: none;
-}
-
-.skill-category.active {
-    display: block;
-    animation: fadeIn 0.5s ease;
-}
-
-.skill-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: 2rem;
-}
-
-.skill-item {
-    background: linear-gradient(145deg, rgba(26, 26, 26, 0.7), rgba(15, 15, 15, 0.8));
-    border-radius: 12px;
-    padding: 1.8rem;
-    transition: all 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    position: relative;
-}
-
-.skill-item:hover {
-    transform: translateY(-8px);
-    border-color: rgba(255, 1, 79, 0.3);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-}
-
-.skill-item.featured {
-    border-color: rgba(255, 1, 79, 0.2);
-    background: linear-gradient(145deg, rgba(26, 26, 26, 0.8), rgba(15, 15, 15, 0.9));
-}
-
-.skill-item.featured::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 5px;
-    height: 50px;
-    background: var(--color-primary);
-    border-radius: 5px 0 0 5px;
-}
-
-.skill-info {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 1.2rem;
-}
-
-.skill-name {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.skill-name i {
-    color: var(--color-primary);
-    font-size: 1.5rem;
-}
-
-.skill-name span {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--color-text);
-}
-
-.skill-percent {
-    background: rgba(255, 1, 79, 0.1);
-    color: var(--color-primary);
-    padding: 5px 10px;
-    border-radius: 20px;
-    font-weight: 700;
-    font-size: 0.9rem;
-}
-
-.skill-meter {
-    margin-bottom: 1.2rem;
-}
-
-.skill-progress {
-    height: 8px;
-    background: var(--color-primary);
-    border-radius: 4px;
-    position: relative;
-    overflow: hidden;
-}
-
-.skill-progress::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 20px;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 0 4px 4px 0;
-}
-
-.skill-dots {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 8px;
-}
-
-.skill-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.2);
-    position: relative;
-}
-
-.skill-dot.active {
-    background: var(--color-primary);
-}
-
-.skill-dot::after {
-    content: '';
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    background: transparent;
-    border: 1px solid var(--color-primary);
-    border-radius: 50%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    transition: transform 0.3s ease;
-    opacity: 0;
-}
-
-.skill-dot.active::after {
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 0.5;
-}
-
-.skill-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-}
-
-.skill-tag {
-    background: rgba(26, 26, 26, 0.8);
-    color: var(--color-text-muted);
-    padding: 6px 12px;
-    border-radius: 6px;
-    font-size: 0.8rem;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.skill-tag:hover {
-    background: rgba(255, 1, 79, 0.1);
-    color: var(--color-text);
-    border-color: rgba(255, 1, 79, 0.2);
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* Social Planets with White Background and Colored Icons */
-.social-planet .planet-body {
-    position: relative;
-    width: 85px;
-    height: 85px;
-    background-color: #ffffff;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-    transition: all 0.5s;
-    z-index: 2;
-}
-
-.planet-icon {
-    font-size: 2.2rem;
-    transition: all 0.3s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Platform specific icon colors */
-.linkedin .planet-icon i {
-    color: #0077B5;
-}
-
-.github .planet-icon i {
-    color: #333333;
-}
-
-.kaggle .planet-icon i {
-    color: #20BEFF;
-}
-
-.huggingface .planet-icon i {
-    color: #FFBD29;
-}
-
-.email .planet-icon i {
-    color: #FF1F5B;
-}
-
-.instagram .planet-icon i {
-    color: #E4405F;
-}
-
-.x-twitter .planet-icon i {
-    color: #000000;
-}
-
-/* Fix for possible icon visibility issues */
-.fab.fa-linkedin-in, .fab.fa-github, .fab.fa-kaggle, 
-.fas.fa-robot, .fas.fa-envelope, .fab.fa-instagram, .fab.fa-x-twitter {
-    display: inline-block;
-    font-size: 2.5rem;
-}
-
-/* Make planets more noticeable by adding shine effect */
-.planet-body::after {
-    content: '';
-    position: absolute;
-    top: 10%;
-    left: 15%;
-    width: 25%;
-    height: 25%;
-    background: rgba(255, 255, 255, 0.5);
-    border-radius: 50%;
-    filter: blur(3px);
-}
-
-
-@media (max-width: 768px) {
-    .social-galaxy {
-        gap: 20px;
-    }
-
-    .social-planet {
-        width: 120px;
-        height: 150px;
-    }
-
-    .planet-body {
-        width: 70px;
-        height: 70px;
-    }
-
-    .planet-icon {
-        font-size: 2rem;
-  }
-}
-
-@media (max-width: 480px) {
-    .social-galaxy {
-        gap: 15px;
-    }
-
-    .social-title {
-        font-size: 2rem;
-    }
-
-    .social-subtitle {
-        font-size: 0.9rem;
-    }
-}
-
 /* Download CV Button */
 .download-cv-container {
     margin-top: 2rem;
@@ -6092,7 +5492,7 @@ section h2 {
 @media (max-width: 480px) {
     .mac-dock {
         padding: 5px 5px;
-        gap: 3px;
+        gap: 0px;
         max-width: 95% !important;
         background-color: rgba(20, 20, 20, 0.85);
     }
@@ -6142,6 +5542,51 @@ section h2 {
 
 @media (max-width: 480px) {
     .quick-reply {
+        font-size: 0.6rem !important;
+        padding: 2px 2px !important;
+        margin: 0 3px 3px 0 !important;
+        min-width: auto !important;
+        border-radius: 10px !important;
+    }
+    
+    .quick-replies {
+        gap: 5px !important;
+        flex-wrap: wrap !important;
+        justify-content: flex-start !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .mac-dock {
+        width: 95% !important;
+        height: 8% !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        padding: 8px 12px !important;
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+    }
+    
+    .dock-item {
+        margin: 0 2px !important; 
+    }
+    
+    #chatbot-toggle {
+        order: 99 !important;
+        margin-left: auto !important;
+        margin-right: 0 !important;
+    }
+    
+    #home-toggle {
+        order: 1 !important;
+        margin-right: auto !important;
+        margin-left: 0 !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .quick-reply {
         font-size: 0.55rem !important;
         padding: 2px 4px !important;
         margin: 0 3px 5px 0 !important;
@@ -6159,32 +5604,32 @@ section h2 {
 @media (max-width: 480px) {
     .mac-dock {
         width: 95% !important;
-        height:5%;
+        height: 7%;
         left: 50% !important;
         transform: translateX(-50%) !important;
         right: auto !important;
         padding: 3px 6px;
-        gap: 3px;
+        gap: 0px;
         justify-content: center;
     }
     
     .dock-item {
-        width: 0px !important;
-        height: 0px !important;
-        margin: 0 1px !important;
+        width: 10px !important;
+        height: 10px !important;
+        margin: 10px 10px !important;
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
         opacity: 1 !important;
         visibility: visible !important;
-        padding: 0;
+        padding: 10px 10px !important;
     }
     
     .dock-item svg,
     .dock-item i {
-      padding: 0;
-        width: 10px !important;
-        height: 10px !important;
+      padding: 10px 10px !important;
+        width: 15px !important;
+        height: 15px !important;
         font-size: 10px !important;
         opacity: 1 !important;
         visibility: visible !important;
@@ -6202,15 +5647,16 @@ section h2 {
 @media (max-width: 480px) {
     /* Force display of all dock items */
     .dock-item {
-        width: 20px !important;
-        height: 20px !important;
+        width: 30px !important;
+        height: 30px !important;
+        gap: 10px !important;
         margin: 3px 3px !important;
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
         opacity: 1 !important;
         visibility: visible !important;
-        border-radius: 20px !important;
+        border-radius: 10px !important;
         background-color: rgba(30, 30, 30, 0.9) !important;
         border: 1px solid rgba(255, 255, 255, 0.1) !important;
     }
@@ -6218,14 +5664,14 @@ section h2 {
     /* Make all icons larger and definitely visible */
     .dock-item svg,
     .dock-item i {
-        width: 30px !important;
-        height: 30px !important;
+        width: 33px !important;
+        height: 33px !important;
         font-size: 20px !important;
         opacity: 1 !important;
         visibility: visible !important;
         display: block !important;
         color: var(--color-text) !important;
-        padding: 2px;
+        padding: 0;
     }
 
     /* Extra emphasis on home and chatbot icons */
@@ -6235,8 +5681,6 @@ section h2 {
         opacity: 1 !important;
         visibility: visible !important;
         position: static !important;
-        background-color: var(--color-primary) !important;
-        border: 2px solid var(--color-primary) !important;
         z-index: 10 !important;
     }
     
@@ -6245,10 +5689,9 @@ section h2 {
     #home-toggle i,
     #chatbot-toggle svg,
     #chatbot-toggle i {
-        width: 10px !important;
-        height: 10px !important;
+        width: 20px !important;
+        height: 20px !important;
         font-size: 10px !important;
-        color: white !important;
         opacity: 1 !important;
         z-index: 11 !important;
     }
@@ -6294,4 +5737,244 @@ section h2 {
         font-size: 0.85rem !important;
         text-align: center !important;
     }
+}
+
+@media (max-width: 480px) {
+    .dock-item {
+        width: 42px !important;
+        height: 42px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 0 !important;
+        overflow: visible !important;
+        position: relative !important;
+    }
+    
+    .dock-item svg,
+    .dock-item i {
+        width: 28px !important;
+        height: 28px !important;
+        font-size: 28px !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        position: absolute !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+    }
+    
+    #home-toggle svg,
+    #home-toggle i,
+    #chatbot-toggle svg,
+    #chatbot-toggle i {
+        width: 28px !important;
+        height: 28px !important;
+        font-size: 28px !important;
+        position: absolute !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Position dock items specifically */
+    .mac-dock {
+        display: flex !important;
+        gap: 0px !important;
+        flex-direction: row !important;
+        justify-content: flex-start !important;
+        position: fixed !important;
+        bottom: 10px !important;
+        left: 2.5% !important;
+        width: 95% !important;
+    }
+    
+    /* Make chatbot button absolutely positioned at right end */
+    #chatbot-toggle {
+        position: absolute !important;
+        right: 10px !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+    }
+    
+    /* Make home button positioned at left end */
+    #home-toggle {
+        position: absolute !important;
+        left: 10px !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Fix mac-dock positioning to ensure left side is visible */
+    .mac-dock {
+        width: 95% !important;
+        gap: 50 !important;
+        left: 50% !important; 
+        transform: translateX(-50%) !important;
+        right: auto !important;
+        bottom: 10px !important;
+        position: fixed !important;
+        display: flex !important;
+        justify-content: center !important;
+        border-radius: 20px !important;
+        overflow: visible !important;
+        padding: 8px 15px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Fix mac-dock icon spacing to be even */
+    .mac-dock {
+        display: flex !important;
+        justify-content: space-evenly !important;
+        align-items: center !important;
+        gap: 50 !important;
+    }
+    
+    .dock-item {
+        flex: 0 0 auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    /* Reset any absolute positioning to use flex layout */
+    #chatbot-toggle, #home-toggle {
+        position: static !important;
+        transform: none !important;
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Set mac-dock to use space-between layout */
+    .mac-dock {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        gap: 0 !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+    
+    /* Force chatbot to the right corner */
+    #chatbot-toggle {
+        position: absolute !important;
+        right: 15px !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        z-index: 100 !important;
+        margin: 0 !important;
+    }
+    
+    /* Adjust other items to not overlap with chatbot */
+    .dock-item:not(#chatbot-toggle) {
+        margin-right: 10px !important;
+    }
+    
+    /* Ensure the last item has extra margin to not overlap with chatbot */
+    .dock-item:last-child:not(#chatbot-toggle) {
+        margin-right: 50px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Make mac-dock layout consistent */
+    .mac-dock {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 10px !important;
+        padding: 8px 15px !important;
+    }
+    
+    /* Make all dock items visually consistent */
+    .dock-item, #chatbot-toggle, #home-toggle {
+        width: 42px !important;
+        height: 42px !important;
+        border-radius: 15px !important;
+        background-color: rgba(30, 30, 30, 0.7) !important;
+        border: 1px solid rgba(255, 255, 255, 0.05) !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        position: static !important;
+        transform: none !important;
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+    }
+    
+    /* Make all icons visually consistent */
+    .dock-item svg, .dock-item i,
+    #chatbot-toggle svg, #chatbot-toggle i,
+    #home-toggle svg, #home-toggle i {
+        width: 24px !important;
+        height: 24px !important;
+        font-size: 24px !important;
+        color: var(--color-text) !important;
+        opacity: 1 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        position: static !important;
+        transform: none !important;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Center the mac-dock and reduce gap between icons */
+    .mac-dock {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 5px !important;
+        padding: 8px 10px !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Reduce gap between icons */
+    .mac-dock {
+        gap: 3px !important;
+    }
+    
+    /* Center icons perfectly within dock items */
+    .dock-item svg, .dock-item i,
+    #chatbot-toggle svg, #chatbot-toggle i,
+    #home-toggle svg, #home-toggle i {
+        position: absolute !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    /* Ensure dock items have relative positioning for absolute centering */
+    .dock-item, #chatbot-toggle, #home-toggle {
+        position: relative !important;
+        overflow: visible !important;
+    }
+}
+
+/* Custom rocket cursor for entire website with glow effect */
+body, a, button, .dock-item, input, textarea, select {
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' transform='rotate(280)'><path d='M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91-.79-.78-2.08-.79-2.91-.09z' stroke='orange' stroke-width='3' /><path d='m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 5.5-5.5 11.5-11 11.5' /><path d='m15 12 3 3' /></svg>") 0 0, auto !important;
+    animation: rocketGlow 1.5s infinite !important;
+}
+
+/* Add animation for the rocket cursor glow effect */
+@keyframes rocketGlow {
+    0% { cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' transform='rotate(315)'><path d='M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91-.79-.78-2.08-.79-2.91-.09z' stroke='orange' stroke-width='3' /><path d='m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 5.5-5.5 11.5-11 11.5' /><path d='m15 12 3 3' /></svg>") 0 0, auto !important; }
+    50% { cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' transform='rotate(315)'><path d='M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91-.79-.78-2.08-.79-2.91-.09z' stroke='%23ff5500' stroke-width='7' /><path d='m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 5.5-5.5 11.5-11 11.5' /><path d='m15 12 3 3' /></svg>") 0 0, auto !important; }
+    100% { cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' transform='rotate(315)'><path d='M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91-.79-.78-2.08-.79-2.91-.09z' stroke='orange' stroke-width='3' /><path d='m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 5.5-5.5 11.5-11 11.5' /><path d='m15 12 3 3' /></svg>") 0 0, auto !important; }
 }
