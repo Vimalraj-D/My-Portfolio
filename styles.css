@@ -6079,37 +6079,64 @@ section h2 {
     }
     
     .dock-item {
-        width: 36px;
-        height: 36px;
+        width: 5px;
+        height: 5px;
     }
     
     .dock-item svg {
-        width: 20px;
-        height: 20px;
+        width: 10px;
+        height: 10px;
     }
 }
 
 @media (max-width: 480px) {
     .mac-dock {
-        width: 95% !important;
-        left: 50% !important;
-        transform: translateX(-50%) !important;
-        right: auto !important;
-        padding: 5px 10px;
+        padding: 5px 5px;
         gap: 3px;
-        justify-content: space-between;
+        max-width: 95% !important;
+        background-color: rgba(20, 20, 20, 0.85);
     }
     
     .dock-item {
-        width: 30px !important;
-        height: 30px !important;
+        width: 50px !important;
+        height: 50px !important;
+        margin: 5 !important;
+        padding: 5 !important;
+        border-radius: 20px !important;
+        min-width: 35px !important;
+        min-height: 35px !important;
     }
     
     .dock-item svg,
     .dock-item i {
-        width: 15px !important;
-        height: 15px !important;
-        font-size: 15px !important;
+        width: 30px !important;
+        height: 30px !important;
+        font-size: 12px !important;
+        padding: 5 !important;
+        margin: 5 !important;
+    }
+    
+    #home-toggle,
+    #chatbot-toggle {
+        width: 20px !important;
+        height: 20px !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        display: flex !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        background-color: var(--color-primary) !important;
+    }
+    
+    #home-toggle svg,
+    #home-toggle i,
+    #chatbot-toggle svg,
+    #chatbot-toggle i {
+        width: 12px !important;
+        height: 12px !important;
+        font-size: 12px !important;
+        padding: 0 !important;
+        margin: 0 !important;
     }
 }
 
@@ -6135,27 +6162,29 @@ section h2 {
         left: 50% !important;
         transform: translateX(-50%) !important;
         right: auto !important;
-        padding: 5px 10px;
-        gap: 5px;
+        padding: 3px 6px;
+        gap: 3px;
         justify-content: center;
     }
     
     .dock-item {
-        width: 30px !important;
-        height: 30px !important;
-        margin: 0 2px !important;
+        width: 0px !important;
+        height: 0px !important;
+        margin: 0 1px !important;
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
         opacity: 1 !important;
         visibility: visible !important;
+        padding: 0;
     }
     
     .dock-item svg,
     .dock-item i {
-        width: 15px !important;
-        height: 15px !important;
-        font-size: 15px !important;
+      padding: 0;
+        width: 10px !important;
+        height: 10px !important;
+        font-size: 10px !important;
         opacity: 1 !important;
         visibility: visible !important;
     }
@@ -6166,5 +6195,102 @@ section h2 {
         display: flex !important;
         opacity: 1 !important;
         visibility: visible !important;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Force display of all dock items */
+    .dock-item {
+        width: 10px !important;
+        height: 10px !important;
+        margin: 1px 1px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        border-radius: 10px !important;
+        background-color: rgba(30, 30, 30, 0.9) !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+    
+    /* Make all icons larger and definitely visible */
+    .dock-item svg,
+    .dock-item i {
+        width: 15px !important;
+        height: 15px !important;
+        font-size: 15px !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        display: block !important;
+        color: var(--color-text) !important;
+        padding: 0;
+    }
+
+    /* Extra emphasis on home and chatbot icons */
+    #home-toggle,
+    #chatbot-toggle {
+        display: flex !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        position: static !important;
+        background-color: var(--color-primary) !important;
+        border: 2px solid var(--color-primary) !important;
+        z-index: 10 !important;
+    }
+    
+    /* Make home and chatbot icons stand out */
+    #home-toggle svg,
+    #home-toggle i,
+    #chatbot-toggle svg,
+    #chatbot-toggle i {
+        width: 10px !important;
+        height: 10px !important;
+        font-size: 10px !important;
+        color: white !important;
+        opacity: 1 !important;
+        z-index: 11 !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .chatbot-popup {
+        bottom: 60px !important;
+        left: auto !important;
+        right: 3% !important;
+        transform: none !important;
+        width: auto !important;
+        min-width: 150px !important;
+        padding: 8px 12px !important;
+        z-index: 1002 !important;
+        display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        background-color: rgba(255, 0, 0, 0.9) !important;
+        position: fixed !important;
+    }
+    
+    .chatbot-popup:after {
+        left: 85% !important;
+        right: auto !important;
+        transform: none !important;
+        border-top: 8px solid rgba(255, 0, 0, 0.9) !important;
+        bottom: -8px !important;
+        position: absolute !important;
+    }
+    
+    .popup-text {
+        opacity: 0 !important;
+        visibility: hidden !important;
+        display: none !important;
+    }
+    
+    .popup-text.active {
+        opacity: 1 !important;
+        visibility: visible !important;
+        display: block !important;
+        color: white !important;
+        font-size: 0.85rem !important;
+        text-align: center !important;
     }
 }
