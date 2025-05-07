@@ -6069,7 +6069,7 @@ section h2 {
     }
     .quick-reply {
         font-size: 0.6rem !important;
-        padding: 2px 6px !important;
+        padding: 2px 2px !important;
     }
 }
 
@@ -6191,7 +6191,7 @@ section h2 {
     #chatbot-toggle {
         order: 99 !important;
         margin-left: auto !important;
-        margin-right: 0 !important;
+        margin-right: 5px !important;
     }
     
     #home-toggle {
@@ -6252,11 +6252,11 @@ section h2 {
     }
 
     /* Ensure contact and chatbot icons are always visible */
-    #contact-toggle,
     #chatbot-toggle {
         display: flex !important;
         opacity: 1 !important;
         visibility: visible !important;
+        margin-right:5px;
     }
 }
 
@@ -6565,6 +6565,7 @@ section h2 {
     /* Position the chatbot icon at the right corner */
     #chatbot-toggle {
         order: 999 !important;
+        margin-right:5px;
     }
     
     /* Position the home icon at the left corner */
