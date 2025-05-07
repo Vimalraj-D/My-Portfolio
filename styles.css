@@ -4933,6 +4933,621 @@ html, body {
     }
 }
 
+/* Copyright Footer */
+.footer {
+    padding: 1.5rem 0;
+    background-color: rgba(10, 10, 15, 0.8);
+    text-align: center;
+    position: relative;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.copyright {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .skill-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .skill-tabs {
+        flex-wrap: wrap;
+    }
+    
+    .skill-tab {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+    
+    .social-galaxy {
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .skill-tab {
+        flex: 1 0 auto;
+        text-align: center;
+        padding: 0.6rem 1rem;
+        font-size: 0.85rem;
+    }
+    
+    .skill-item {
+        padding: 1.2rem;
+    }
+}
+
+/* Rotation animation for planet rings */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+/* Enhance Skills Section */
+.skill-item {
+    background: #0F0F0F;
+    border: 1px solid rgba(255, 1, 79, 0.1);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: all 0.3s;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.skill-item:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 1, 79, 0.4);
+}
+
+.skill-item.featured {
+    border-color: rgba(255, 1, 79, 0.3);
+}
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.skill-name {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.skill-name i {
+    color: var(--color-primary);
+    font-size: 1.2rem;
+}
+
+.skill-percent {
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.skill-meter {
+    margin: 1rem 0;
+    position: relative;
+}
+
+.skill-progress {
+    height: 10px;
+    background: var(--color-primary);
+    border-radius: 10px;
+    transition: width 1s ease-in-out;
+}
+
+.skill-dots {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+.skill-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.skill-dot.active {
+    background: var(--color-primary);
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 1rem;
+}
+
+.skill-tag {
+    font-size: 0.75rem;
+    padding: 5px 12px;
+    border-radius: 20px;
+    background: rgba(255, 1, 79, 0.08);
+    color: var(--color-text);
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.skill-tag:hover {
+    background: rgba(255, 1, 79, 0.15);
+}
+
+/* Copyright Section Styles */
+.copyright-section {
+    background-color: #000000;
+    padding: 2rem 0;
+    text-align: center;
+    border-top: 1px solid rgba(255, 1, 79, 0.1);
+    margin-bottom: 50px;
+}
+
+.copyright-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.copyright-text {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 500;
+}
+
+.copyright-tagline {
+    font-size: 0.9rem;
+    color: var(--color-primary);
+    letter-spacing: 1px;
+}
+
+/* Improve Contact Info Section */
+.contact-info {
+    margin-top: 2.5rem;
+    background: rgba(15, 15, 15, 0.5);
+    border-radius: 16px;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 1, 79, 0.15);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding: 0.8rem;
+    border-radius: 12px;
+    background: rgba(26, 26, 26, 0.5);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.info-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    border-color: rgba(255, 1, 79, 0.2);
+}
+
+.info-item:last-child {
+    margin-bottom: 0;
+}
+
+.info-icon {
+    width: 50px;
+    height: 50px;
+    background: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    flex-shrink: 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.info-icon i {
+    font-size: 1.5rem;
+}
+
+.info-text h4 {
+    font-size: 1.1rem;
+    color: var(--color-text);
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.info-text p,
+.info-text a {
+    font-size: 1rem;
+    color: var(--color-text-muted);
+    transition: color 0.3s;
+}
+
+.info-text a:hover {
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+
+/* Completely Redesign Skills Section */
+.skills-section {
+    padding: 6rem 0;
+    position: relative;
+    background-color: var(--color-background);
+    overflow: hidden;
+}
+
+.skills-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(255, 1, 79, 0.05), transparent 70%);
+    z-index: 0;
+}
+
+.skills-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+    z-index: 1;
+}
+
+.skills-main-title {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    color: var(--color-text);
+    position: relative;
+    display: inline-block;
+}
+
+.skills-main-title .highlight-gradient {
+    color: var(--color-primary);
+}
+
+.skills-description {
+    color: var(--color-text-muted);
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+}
+
+.skills-content {
+    position: relative;
+    z-index: 1;
+}
+
+.skills-category-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+}
+
+.skill-tab {
+    padding: 0.8rem 1.8rem;
+    background: rgba(26, 26, 26, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 30px;
+    color: var(--color-text-muted);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.skill-tab:hover {
+    color: var(--color-text);
+    border-color: rgba(255, 1, 79, 0.3);
+}
+
+.skill-tab.active {
+    background: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+}
+
+.skill-category {
+    display: none;
+}
+
+.skill-category.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.skill-item {
+    background: linear-gradient(145deg, rgba(26, 26, 26, 0.7), rgba(15, 15, 15, 0.8));
+    border-radius: 12px;
+    padding: 1.8rem;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+}
+
+.skill-item:hover {
+    transform: translateY(-8px);
+    border-color: rgba(255, 1, 79, 0.3);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.skill-item.featured {
+    border-color: rgba(255, 1, 79, 0.2);
+    background: linear-gradient(145deg, rgba(26, 26, 26, 0.8), rgba(15, 15, 15, 0.9));
+}
+
+.skill-item.featured::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 50px;
+    background: var(--color-primary);
+    border-radius: 5px 0 0 5px;
+}
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.2rem;
+}
+
+.skill-name {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.skill-name i {
+    color: var(--color-primary);
+    font-size: 1.5rem;
+}
+
+.skill-name span {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.skill-percent {
+    background: rgba(255, 1, 79, 0.1);
+    color: var(--color-primary);
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.skill-meter {
+    margin-bottom: 1.2rem;
+}
+
+.skill-progress {
+    height: 8px;
+    background: var(--color-primary);
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-progress::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 0 4px 4px 0;
+}
+
+.skill-dots {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+}
+
+.skill-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    position: relative;
+}
+
+.skill-dot.active {
+    background: var(--color-primary);
+}
+
+.skill-dot::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: transparent;
+    border: 1px solid var(--color-primary);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.3s ease;
+    opacity: 0;
+}
+
+.skill-dot.active::after {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.5;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-tag {
+    background: rgba(26, 26, 26, 0.8);
+    color: var(--color-text-muted);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.skill-tag:hover {
+    background: rgba(255, 1, 79, 0.1);
+    color: var(--color-text);
+    border-color: rgba(255, 1, 79, 0.2);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Social Planets with White Background and Colored Icons */
+.social-planet .planet-body {
+    position: relative;
+    width: 85px;
+    height: 85px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    transition: all 0.5s;
+    z-index: 2;
+}
+
+.planet-icon {
+    font-size: 2.2rem;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Platform specific icon colors */
+.linkedin .planet-icon i {
+    color: #0077B5;
+}
+
+.github .planet-icon i {
+    color: #333333;
+}
+
+.kaggle .planet-icon i {
+    color: #20BEFF;
+}
+
+.huggingface .planet-icon i {
+    color: #FFBD29;
+}
+
+.email .planet-icon i {
+    color: #FF1F5B;
+}
+
+.instagram .planet-icon i {
+    color: #E4405F;
+}
+
+.x-twitter .planet-icon i {
+    color: #000000;
+}
+
+/* Fix for possible icon visibility issues */
+.fab.fa-linkedin-in, .fab.fa-github, .fab.fa-kaggle, 
+.fas.fa-robot, .fas.fa-envelope, .fab.fa-instagram, .fab.fa-x-twitter {
+    display: inline-block;
+    font-size: 2.5rem;
+}
+
+/* Make planets more noticeable by adding shine effect */
+.planet-body::after {
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    width: 25%;
+    height: 25%;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    filter: blur(3px);
+}
+
+
+@media (max-width: 768px) {
+    .social-galaxy {
+        gap: 20px;
+    }
+
+    .social-planet {
+        width: 120px;
+        height: 150px;
+    }
+
+    .planet-body {
+        width: 70px;
+        height: 70px;
+    }
+
+    .planet-icon {
+        font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+    .social-galaxy {
+        gap: 15px;
+    }
+
+    .social-title {
+        font-size: 2rem;
+    }
+
+    .social-subtitle {
+        font-size: 0.9rem;
+    }
+}
+
+/* Copyright Footer */
+.footer {
+    padding: 1.5rem 0;
+    background-color: rgba(10, 10, 15, 0.8);
+    text-align: center;
+    position: relative;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.copyright {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    margin: 0;
+}
+
 /* Download CV Button */
 .download-cv-container {
     margin-top: 2rem;
@@ -5862,5 +6477,39 @@ section h2 {
         max-width: 95%;
         left: 50%;
         transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 480px) {
+    /* Center the mac-dock and ensure all icons are properly contained within it */
+    .mac-dock {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 0px !important;
+        padding: 8px 15px !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        position: fixed !important;
+        overflow: visible !important;
+        width: auto !important;
+        max-width: 95% !important;
+    }
+    
+    /* Ensure home and chatbot icons stay within the dock */
+    #home-toggle, #chatbot-toggle {
+        position: static !important;
+        transform: none !important;
+        margin: 0 !important;
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        flex: 0 0 auto !important;
+    }
+    
+    .dock-item {
+        flex: 0 0 auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
     }
 }
