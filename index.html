@@ -13,8 +13,7 @@
     <meta property="og:description" content="Innovative ML Engineer specializing in AI solutions with expertise in PyTorch, OpenCV, and deep learning.">
     <meta property="og:type" content="website">
 
-    <link rel="icon" href="logo-top.jpeg" type="image/jpeg">
-    <link rel="apple-touch-icon" href="logo-top.jpeg">
+    <link rel="icon" href="Gleb_Kuznetsov.png" type="image/png">
     <title>Vimalraj D - ML Engineer</title>
     <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
     <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
@@ -24,6 +23,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- EmailJS -->
+    <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+       (function(){
+          emailjs.init({
+            publicKey: "sMIDUfJYW9jmIlrJD",
+          });
+       })();
+    </script>
 </head>
 <body>
     <header>
@@ -312,11 +322,17 @@
         </section>
 
         <!-- Skills Section -->
-        <section class="skills-section" id="skills" aria-label="My Skills">
+        <section class="skills-section" id="skills" aria-label="Technical Skills">
+            <div class="skills-universe" aria-hidden="true">
+                <div class="orbit orbit-1"></div>
+                <div class="orbit orbit-2"></div>
+                <div class="orbit orbit-3"></div>
+                <div class="central-glow"></div>
+            </div>
             <div class="container">
                 <div class="skills-header">
-                    <h2 class="skills-main-title">Technical <span class="highlight-gradient">Skills</span></h2>
-                    <p class="skills-description">My key areas of expertise in AI and machine learning</p>
+                    <h2 class="contact-title">Technical <span class="highlight-gradient">Skills</span></h2>
+                    <p class="skills-description">My toolkit for building intelligent systems</p>
                 </div>
 
                 <div class="skills-content">
@@ -680,11 +696,9 @@
         </section>
 
         <!-- Education Section -->
-        <section class="education-section" id="education" aria-label="My Education">
+        <section class="education-section" id="education" aria-label="Education and Certifications">
             <div class="container">
                 <h2 class="contact-title">Education</h2>
-                
-                <!-- Formal Education -->
                 <div class="education-card">
                     <div class="education-header">
                         <div class="education-logo">
@@ -692,18 +706,20 @@
                         </div>
                         <div class="education-info">
                             <h3 class="education-degree">B.E. in Computer Science and Engineering (AI & ML)</h3>
-                            <span class="education-school">Dr. Mahalingham College of Engineering and Technology</span>
-                            <span class="education-date">2023 - 2027</span>
-                            <p class="education-description">Pursuing a specialized degree in Computer Science with a focus on Artificial Intelligence and Machine Learning. Courses include Deep Learning, Computer Vision, Natural Language Processing, and Data Science.</p>
+                            <div class="education-school">Dr. Mahalingham College of Engineering and Technology, Tamil Nadu</div>
+                            <div class="education-date">2023 - Present</div>
                         </div>
                     </div>
+                    <div class="education-description">
+                        <p>Currently pursuing my bachelor's degree with a specialization in Artificial Intelligence and Machine Learning. Exploring cutting-edge technologies and building a strong foundation in computer science fundamentals.</p>
+                    </div>
                 </div>
-                
-                <h3 class="inspiration-title" style="margin-top: 3rem;">Certifications</h3>
+
+                <h2 class="contact-title">Certifications</h2>
                 <div class="certification-grid">
                     <!-- Certification 1 -->
                     <div class="certification-card project-card">
-                        <div class="project-image" style="height: 150px; display: flex; align-items: center; justify-content: center; background-color: rgba(255, 1, 79, 0.1);">
+                        <div class="project-image" style="height: 150px; display: flex; align-items: center; justify-content: center; background-color: rgba(255, 1, 79, 0.1); cursor: pointer;" onclick="openImageModal('cert1')">
                             <i class="fas fa-certificate" style="font-size: 4rem; color: var(--color-primary);"></i>
                         </div>
                         <div class="project-content">
@@ -711,12 +727,16 @@
                             <span class="certification-issuer">NPTEL</span>
                             <span class="certification-date">2024</span>
                             <p class="project-description">Elite + Silver certification demonstrating proficiency in C programming fundamentals, algorithms, and data structures.</p>
+                            <button class="view-certificate-btn" onclick="openImageModal('cert1')">
+                                <i class="fas fa-eye"></i>
+                                <span>View Certificate</span>
+                            </button>
                         </div>
                     </div>
                     
                     <!-- Certification 2 -->
                     <div class="certification-card project-card">
-                        <div class="project-image" style="height: 150px; display: flex; align-items: center; justify-content: center; background-color: rgba(255, 1, 79, 0.1);">
+                        <div class="project-image" style="height: 150px; display: flex; align-items: center; justify-content: center; background-color: rgba(255, 1, 79, 0.1); cursor: pointer;" onclick="openImageModal('cert2')">
                             <i class="fas fa-language" style="font-size: 4rem; color: var(--color-primary);"></i>
                         </div>
                         <div class="project-content">
@@ -724,28 +744,52 @@
                             <span class="certification-issuer">Linguaskill</span>
                             <span class="certification-date">2023</span>
                             <p class="project-description">B1 Level certification verifying professional communication abilities in English language.</p>
+                            <button class="view-certificate-btn" onclick="openImageModal('cert2')">
+                                <i class="fas fa-eye"></i>
+                                <span>View Certificate</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="certification-card project-card">
+                        <div class="project-image" style="height: 150px; display: flex; align-items: center; justify-content: center; background-color: rgba(255, 1, 79, 0.1); cursor: pointer;" onclick="openImageModal('certnvidia1')">
+                            <i class="fas fa-language" style="font-size: 4rem; color: var(--color-primary);"></i>
+                        </div>
+                        <div class="project-content">
+                            <h4 class="project-title">Getting Started with AI on Jetson Nano</h4>
+                            <span class="certification-issuer">NVIDIA - DLI</span>
+                            <span class="certification-date">April 2025</span>
+                            <p class="project-description">This course introduces learners to AI development using the NVIDIA Jetson Nano, a powerful edge computing device for running machine learning models locally.</p>
+                            <button class="view-certificate-btn" onclick="openImageModal('certnvidia1')">
+                                <i class="fas fa-eye"></i>
+                                <span>View Certificate</span>
+                            </button>
                         </div>
                     </div>
                     
                     <!-- Certification 3 -->
                     <div class="certification-card project-card">
-                        <div class="project-image" style="height: 150px; display: flex; align-items: center; justify-content: center; background-color: rgba(255, 1, 79, 0.1);">
-                            <i class="fas fa-brain" style="font-size: 4rem; color: var(--color-primary);"></i>
+                        <div class="project-image" style="height: 150px; display: flex; align-items: center; justify-content: center; background-color: rgba(255, 1, 79, 0.1); cursor: pointer;" onclick="openImageModal('cert3')">
+                            <i class="fas fa-laptop-code" style="font-size: 4rem; color: var(--color-primary);"></i>
                         </div>
                         <div class="project-content">
-                            <h4 class="project-title">Machine Learning Internship</h4>
-                            <span class="certification-issuer">Unified Mentor</span>
-                            <span class="certification-date">2024</span>
-                            <p class="project-description">Certificate earned through practical industry experience implementing machine learning solutions.</p>
+                            <h4 class="project-title">Computer Vision Certification</h4>
+                            <span class="certification-issuer">Kaggle</span>
+                            <span class="certification-date">May 2025</span>
+                            <p class="project-description">Design and implement convolutional neural networks (CNNs) using TensorFlow and Keras to solve complex computer vision tasks such as image classification, object detection, and segmentation.</p>
+                            <button class="view-certificate-btn" onclick="openImageModal('cert3')">
+                                <i class="fas fa-eye"></i>
+                                <span>View Certificate</span>
+                            </button>
                         </div>
                     </div>
                 </div>
                 
-                <h3 class="inspiration-title" style="margin-top: 3rem;">Achievements</h3>
+                <h2 class="contact-title">Achievements</h2>
                 <div class="certification-grid">
                     <!-- Achievement 1 -->
                     <div class="certification-card project-card">
-                        <div class="project-image" style="height: 150px; display: flex; align-items: center; justify-content: center; background-color: rgba(255, 1, 79, 0.1);">
+                        <div class="project-image" style="height: 150px; display: flex; align-items: center; justify-content: center; background-color: rgba(255, 1, 79, 0.1); cursor: pointer;" onclick="openImageModal('ach1')">
                             <i class="fas fa-trophy" style="font-size: 4rem; color: var(--color-primary);"></i>
                         </div>
                         <div class="project-content">
@@ -753,12 +797,16 @@
                             <span class="certification-issuer">TechFest 2024</span>
                             <span class="certification-date">2024</span>
                             <p class="project-description">First place in the AI/ML category for developing an innovative healthcare solution using computer vision.</p>
+                            <button class="view-certificate-btn" onclick="openImageModal('ach1')">
+                                <i class="fas fa-eye"></i>
+                                <span>View Certificate</span>
+                            </button>
                         </div>
                     </div>
                     
                     <!-- Achievement 2 -->
                     <div class="certification-card project-card">
-                        <div class="project-image" style="height: 150px; display: flex; align-items: center; justify-content: center; background-color: rgba(255, 1, 79, 0.1);">
+                        <div class="project-image" style="height: 150px; display: flex; align-items: center; justify-content: center; background-color: rgba(255, 1, 79, 0.1); cursor: pointer;" onclick="openImageModal('ach2')">
                             <i class="fas fa-award" style="font-size: 4rem; color: var(--color-primary);"></i>
                         </div>
                         <div class="project-content">
@@ -766,12 +814,16 @@
                             <span class="certification-issuer">International Journal of AI Research</span>
                             <span class="certification-date">2024</span>
                             <p class="project-description">Published paper on "Novel Approaches to Image Classification with Limited Training Data" demonstrating innovative techniques.</p>
+                            <button class="view-certificate-btn" onclick="openImageModal('ach2')">
+                                <i class="fas fa-eye"></i>
+                                <span>View Certificate</span>
+                            </button>
                         </div>
                     </div>
                     
                     <!-- Achievement 3 -->
                     <div class="certification-card project-card">
-                        <div class="project-image" style="height: 150px; display: flex; align-items: center; justify-content: center; background-color: rgba(255, 1, 79, 0.1);">
+                        <div class="project-image" style="height: 150px; display: flex; align-items: center; justify-content: center; background-color: rgba(255, 1, 79, 0.1); cursor: pointer;" onclick="openImageModal('ach3')">
                             <i class="fas fa-medal" style="font-size: 4rem; color: var(--color-primary);"></i>
                         </div>
                         <div class="project-content">
@@ -779,6 +831,10 @@
                             <span class="certification-issuer">Kaggle</span>
                             <span class="certification-date">2023</span>
                             <p class="project-description">Ranked in the top 5% of participants in a competitive machine learning challenge focused on predictive analytics.</p>
+                            <button class="view-certificate-btn" onclick="openImageModal('ach3')">
+                                <i class="fas fa-eye"></i>
+                                <span>View Certificate</span>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -972,6 +1028,7 @@
     <!-- Chatbot Interface -->
     <div class="chatbot-panel" id="chatbot-panel" role="dialog" aria-labelledby="chatbot-title" aria-hidden="true">
         <div class="chatbot-header">
+            <img src="Gleb_Kuznetsov.png" alt="Vimalraj D" width="30" height="30" loading="lazy" class="chatbot-header-logo">
             <h3 id="chatbot-title">AI Assistant</h3>
             <button class="chatbot-close" id="chatbot-close" aria-label="Close chat">×</button>
         </div>
@@ -1016,7 +1073,7 @@
     <section class="social-section" aria-label="Social Media Links">
         <div class="container">
             <div class="social-header">
-                <h2 class="social-title">Connect with Me</h2>
+                <h2 class="contact-title">Connect with Me</h2>
                 <p class="social-subtitle">Let's collaborate and build the future of AI together</p>
             </div>
             
@@ -1075,6 +1132,34 @@
                         </div>
                     </div>
                     <div class="planet-name">HuggingFace</div>
+                </a>
+
+                <!-- HackerRank -->
+                <a href="https://hackerrank.com/vimalrajd" target="_blank" rel="noopener" class="social-planet hackerrank" aria-label="HackerRank Profile">
+                    <div class="planet-orbit">
+
+                        <div class="planet-body">
+
+                            <div class="planet-icon">
+                                <i class="fab fa-hackerrank"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="planet-name">HackerRank</div>
+                </a>
+
+                <!-- LeetCode -->
+                <a href="https://leetcode.com/vimalrajd" target="_blank" rel="noopener" class="social-planet leetcode" aria-label="LeetCode Profile">
+                    <div class="planet-orbit">
+
+                        <div class="planet-body">
+
+                            <div class="planet-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="planet-name">LeetCode</div>
                 </a>
 
                 <!-- Instagram -->
@@ -1144,6 +1229,14 @@
             </div>
         </div>
     </footer>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeImageModal()">&times;</span>
+            <img id="modalImage" src="" alt="Certificate/Achievement Image">
+        </div>
+    </div>
 
     <script>
         // Set current year in copyright
