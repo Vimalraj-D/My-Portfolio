@@ -3,6 +3,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const hasGSAP = typeof gsap !== 'undefined';
     console.log("GSAP available:", hasGSAP);
 
+    // Initialize Email.js for contact form functionality
+    initializeEmailJS();
+    
+    // Setup contact form
+    setupContactForm();
+
     // Mobile detection
     const isMobile = window.innerWidth <= 768 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
     
@@ -534,41 +540,61 @@ document.addEventListener('DOMContentLoaded', function() {
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            console.log("Form submitted");
+            console.log("Form submission started...");
             
-            // Simulate form submission
-            setTimeout(() => {
-                if (formModal) {
-                    formModal.style.display = 'flex';
+            // Show loading message
+            formMessage.textContent = "Sending message...";
+            formMessage.style.color = "var(--color-text-muted)";
+            
+            // Prepare template parameters for EmailJS
+            const templateParams = {
+                from_name: document.getElementById('name').value,
+                from_email: document.getElementById('email').value,
+                subject: document.getElementById('subject').value,
+                message: document.getElementById('message').value,
+                to_name: "Vimalraj D",
+                to_email: "vimalrajnov172005@gmail.com"
+            };
+            
+            console.log("Sending email with parameters:", JSON.stringify(templateParams));
+            
+            if (typeof emailjs === 'undefined') {
+                console.error("EmailJS is not defined! Make sure EmailJS is properly loaded.");
+                formMessage.textContent = "Error: Email service not available. Please try again later.";
+                formMessage.style.color = "red";
+                return;
+            }
+            
+            // Using EmailJS to send email
+            emailjs.send('service_i1edc0e', 'template_fk8djia', templateParams)
+                .then(function(response) {
+                    console.log("Email sent successfully!", response);
+                    // Reset form
+                    contactForm.reset();
                     
-                    if (hasGSAP) {
-                        gsap.from(formModal.querySelector('.modal-content'), {
-                            scale: 0.8,
-                            opacity: 0,
-                            duration: 0.5,
-                            ease: 'back.out(1.7)'
-                        });
-                    } else {
-                        const modalContent = formModal.querySelector('.modal-content');
-                        modalContent.style.opacity = "0";
-                        modalContent.style.transform = "scale(0.8)";
-                        modalContent.style.transition = "opacity 0.5s, transform 0.5s";
-                        
-                        setTimeout(() => {
-                            modalContent.style.opacity = "1";
-                            modalContent.style.transform = "scale(1)";
-                        }, 10);
+                    // Show success message
+                    formMessage.textContent = "Message sent successfully!";
+                    formMessage.style.color = "var(--color-primary)";
+                    
+                    // Show success modal
+                    if (formModal) {
+                        formModal.style.display = "flex";
                     }
-                }
-                contactForm.reset();
-            }, 1000);
+                })
+                .catch(function(error) {
+                    console.error("Email sending failed!", error);
+                    formMessage.textContent = "Failed to send message: " + (error.text || "Unknown error");
+                    formMessage.style.color = "red";
+                });
         });
+    } else {
+        console.error("Contact form not found in the DOM");
     }
     
     if (modalClose) {
         modalClose.addEventListener('click', function() {
             if (formModal) {
-                if (hasGSAP) {
+                if (typeof gsap !== 'undefined') {
                     gsap.to(formModal.querySelector('.modal-content'), {
                         scale: 0,
                         opacity: 0,
@@ -1996,4 +2022,190 @@ document.addEventListener('DOMContentLoaded', function() {
     // Update navigation icons
     updateNavIcons();
 });
+
+// Image Modal Functions
+function openImageModal(imageId) {
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImage');
+    
+    // Map image IDs to actual image paths
+    const imageMap = {
+        'cert1': 'assets/images/certificates/nptel-cert.jpg',
+        'cert2': 'assets/images/certificates/linguaskill-cert.jpg',
+        'certnvidia1': 'certificates/nvidiac1.jpg',
+        'cert3': 'certificates/VIMALRAJ D - Computer Vision.png',
+        'ach1': 'assets/images/achievements/hackathon-trophy.jpg',
+        'ach2': 'assets/images/achievements/research-paper.jpg',
+        'ach3': 'assets/images/achievements/kaggle-medal.jpg'
+    };
+    
+    // Set the image source
+    modalImg.src = imageMap[imageId] || '';
+    
+    // Show the modal with animation
+    modal.style.display = 'flex';
+    setTimeout(() => {
+        modal.classList.add('show');
+    }, 10);
+    
+    // Prevent body scrolling
+    document.body.style.overflow = 'hidden';
+}
+
+function closeImageModal() {
+    const modal = document.getElementById('imageModal');
+    
+    // Hide the modal with animation
+    modal.classList.remove('show');
+    setTimeout(() => {
+        modal.style.display = 'none';
+    }, 300);
+    
+    // Restore body scrolling
+    document.body.style.overflow = '';
+}
+
+// Close modal when clicking outside the image
+document.getElementById('imageModal').addEventListener('click', function(e) {
+    if (e.target === this) {
+        closeImageModal();
+    }
+});
+
+// Close modal with Escape key
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        closeImageModal();
+    }
+});
+
+// Add this new function for Email.js setup
+function initializeEmailJS() {
+    // Check if EmailJS is already defined
+    if (typeof emailjs !== 'undefined') {
+        console.log("EmailJS already loaded");
+        // Set up the contact form
+        setupContactForm();
+        return;
+    }
+    
+    console.log("Loading EmailJS...");
+    // Load EmailJS script dynamically if not already loaded
+    const script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js';
+    script.async = true;
+    
+    script.onload = function() {
+        console.log("EmailJS loaded successfully");
+        // Initialize EmailJS with your public key
+        try {
+            emailjs.init({
+                publicKey: "sMIDUfJYW9jmIlrJD"
+            });
+            console.log("EmailJS initialized");
+            // Set up the contact form
+            setupContactForm();
+        } catch (error) {
+            console.error("Error initializing EmailJS:", error);
+        }
+    };
+    
+    script.onerror = function() {
+        console.error("Failed to load EmailJS script");
+    };
+    
+    document.head.appendChild(script);
+}
+
+// Contact Form Submission
+function setupContactForm() {
+    const contactForm = document.getElementById('contact-form');
+    const formMessage = document.getElementById('form-message');
+    const formModal = document.getElementById('form-modal');
+    const modalClose = document.getElementById('modal-close');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            console.log("Form submission started...");
+            
+            // Show loading message
+            formMessage.textContent = "Sending message...";
+            formMessage.style.color = "var(--color-text-muted)";
+            
+            // Prepare template parameters for EmailJS
+            const templateParams = {
+                from_name: document.getElementById('name').value,
+                from_email: document.getElementById('email').value,
+                subject: document.getElementById('subject').value,
+                message: document.getElementById('message').value,
+                to_name: "Vimalraj D",
+                to_email: "vimalrajnov172005@gmail.com"
+            };
+            
+            console.log("Sending email with parameters:", JSON.stringify(templateParams));
+            
+            if (typeof emailjs === 'undefined') {
+                console.error("EmailJS is not defined! Make sure EmailJS is properly loaded.");
+                formMessage.textContent = "Error: Email service not available. Please try again later.";
+                formMessage.style.color = "red";
+                return;
+            }
+            
+            // Using EmailJS to send email
+            emailjs.send('service_i1edc0e', 'template_fk8djia', templateParams)
+                .then(function(response) {
+                    console.log("Email sent successfully!", response);
+                    // Reset form
+                    contactForm.reset();
+                    
+                    // Show success message
+                    formMessage.textContent = "Message sent successfully!";
+                    formMessage.style.color = "var(--color-primary)";
+                    
+                    // Show success modal
+                    if (formModal) {
+                        formModal.style.display = "flex";
+                    }
+                })
+                .catch(function(error) {
+                    console.error("Email sending failed!", error);
+                    formMessage.textContent = "Failed to send message: " + (error.text || "Unknown error");
+                    formMessage.style.color = "red";
+                });
+        });
+    } else {
+        console.error("Contact form not found in the DOM");
+    }
+    
+    if (modalClose) {
+        modalClose.addEventListener('click', function() {
+            if (formModal) {
+                if (typeof gsap !== 'undefined') {
+                    gsap.to(formModal.querySelector('.modal-content'), {
+                        scale: 0,
+                        opacity: 0,
+                        duration: 0.3,
+                        ease: 'power2.in',
+                        onComplete: () => {
+                            formModal.style.display = 'none';
+                        }
+                    });
+                } else {
+                    const modalContent = formModal.querySelector('.modal-content');
+                    modalContent.style.opacity = "0";
+                    modalContent.style.transform = "scale(0)";
+                    setTimeout(() => {
+                        formModal.style.display = 'none';
+                    }, 300);
+                }
+            }
+        });
+    }
+}
+
+// Replace the old sendEmail function with this simplified version
+function sendEmail(params) {
+    return emailjs.send('service_i1edc0e', 'template_fk8djia', params);
+}
 
