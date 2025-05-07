@@ -6068,8 +6068,8 @@ section h2 {
         max-width: 78vw !important;
     }
     .quick-reply {
-        font-size: 0.55rem !important;
-        padding: 2px 4px !important;
+        font-size: 0.6rem !important;
+        padding: 2px 6px !important;
     }
 }
 
@@ -6088,9 +6088,10 @@ section h2 {
 
 @media (max-width: 768px) {
     .mac-dock {
-        width: 95%;
-        left: 2.5%;
-        right: 2.5%;
+        width: 98%;
+        left: 1%;
+        right: 1%;
+        gap:3px;
     }
     
     .dock-item {
@@ -6107,7 +6108,7 @@ section h2 {
 @media (max-width: 480px) {
     .mac-dock {
         padding: 5px 5px;
-        gap: 0px;
+        gap: 4px;
         max-width: 95% !important;
         background-color: rgba(20, 20, 20, 0.85);
     }
@@ -6521,7 +6522,7 @@ section h2 {
         justify-content: space-between !important;
         align-items: center !important;
         gap: 5px !important;
-        padding: 8px 15px !important;
+        padding: 10px 20px !important;
         left: 50% !important;
         transform: translateX(-50%) !important;
         position: fixed !important;
