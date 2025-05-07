@@ -5006,7 +5006,7 @@ transform: translateY(-3px);
 @media (max-width: 360px) {
     .mac-dock {
         bottom: 10px;
-        gap: 3px;
+        gap: 0px;
         padding: 6px 10px;
         border-radius: 16px;
         max-width: 95%;
@@ -5453,8 +5453,8 @@ section h2 {
         max-width: 78vw !important;
     }
     .quick-reply {
-        font-size: 0.6rem !important;
-        padding: 2px 2px !important;
+        font-size: 0.55rem !important;
+        padding: 2px 4px !important;
     }
 }
 
@@ -5604,7 +5604,7 @@ section h2 {
 @media (max-width: 480px) {
     .mac-dock {
         width: 95% !important;
-        height: 6%;
+        height: 7%;
         left: 50% !important;
         transform: translateX(-50%) !important;
         right: auto !important;
@@ -5832,7 +5832,18 @@ section h2 {
         display: flex !important;
         justify-content: space-evenly !important;
         align-items: center !important;
-        gap: 5 !important;
+        gap: 0px !important;
+    }
+    
+    /* Center the mac-dock and reduce gap between icons */
+    .mac-dock {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 0px !important;
+        padding: 8px 10px !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
     }
     
     .dock-item {
@@ -5840,141 +5851,16 @@ section h2 {
         margin: 0 !important;
         padding: 0 !important;
     }
-    
-    /* Reset any absolute positioning to use flex layout */
-    #chatbot-toggle, #home-toggle {
-        position: static !important;
-        transform: none !important;
-        top: auto !important;
-        left: auto !important;
-        right: auto !important;
-    }
 }
 
-@media (max-width: 480px) {
-    /* Set mac-dock to use space-between layout */
+@media (max-width: 360px) {
     .mac-dock {
-        display: flex !important;
-        justify-content: space-between !important;
-        align-items: center !important;
-        gap: 0 !important;
-        padding-left: 15px !important;
-        padding-right: 15px !important;
+        bottom: 10px;
+        gap: 0px;
+        padding: 6px 10px;
+        border-radius: 16px;
+        max-width: 95%;
+        left: 50%;
+        transform: translateX(-50%);
     }
-    
-    /* Force chatbot to the right corner */
-    #chatbot-toggle {
-        position: absolute !important;
-        right: 15px !important;
-        top: 50% !important;
-        transform: translateY(-50%) !important;
-        z-index: 100 !important;
-        margin: 0 !important;
-    }
-    
-    /* Adjust other items to not overlap with chatbot */
-    .dock-item:not(#chatbot-toggle) {
-        margin-right: 10px !important;
-    }
-    
-    /* Ensure the last item has extra margin to not overlap with chatbot */
-    .dock-item:last-child:not(#chatbot-toggle) {
-        margin-right: 50px !important;
-    }
-}
-
-@media (max-width: 480px) {
-    /* Make mac-dock layout consistent */
-    .mac-dock {
-        display: flex !important;
-        justify-content: center !important;
-        align-items: center !important;
-        gap: 5px !important;
-        padding: 8px 15px !important;
-    }
-    
-    /* Make all dock items visually consistent */
-    .dock-item, #chatbot-toggle, #home-toggle {
-        width: 42px !important;
-        height: 42px !important;
-        border-radius: 15px !important;
-        background-color: rgba(30, 30, 30, 0.7) !important;
-        border: 1px solid rgba(255, 255, 255, 0.05) !important;
-        margin: 0 !important;
-        padding: 0 !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        position: static !important;
-        transform: none !important;
-        top: auto !important;
-        left: auto !important;
-        right: auto !important;
-    }
-    
-    /* Make all icons visually consistent */
-    .dock-item svg, .dock-item i,
-    #chatbot-toggle svg, #chatbot-toggle i,
-    #home-toggle svg, #home-toggle i {
-        width: 24px !important;
-        height: 24px !important;
-        font-size: 24px !important;
-        color: var(--color-text) !important;
-        opacity: 1 !important;
-        margin: 0 !important;
-        padding: 0 !important;
-        position: static !important;
-        transform: none !important;
-    }
-}
-
-@media (max-width: 480px) {
-    /* Center the mac-dock and reduce gap between icons */
-    .mac-dock {
-        display: flex !important;
-        justify-content: center !important;
-        align-items: center !important;
-        gap: 5px !important;
-        padding: 8px 10px !important;
-        left: 50% !important;
-        transform: translateX(-50%) !important;
-    }
-}
-
-@media (max-width: 480px) {
-    /* Reduce gap between icons */
-    .mac-dock {
-        gap: 3px !important;
-    }
-    
-    /* Center icons perfectly within dock items */
-    .dock-item svg, .dock-item i,
-    #chatbot-toggle svg, #chatbot-toggle i,
-    #home-toggle svg, #home-toggle i {
-        position: absolute !important;
-        top: 50% !important;
-        left: 50% !important;
-        transform: translate(-50%, -50%) !important;
-        margin: 0 !important;
-        padding: 0 !important;
-    }
-    
-    /* Ensure dock items have relative positioning for absolute centering */
-    .dock-item, #chatbot-toggle, #home-toggle {
-        position: relative !important;
-        overflow: visible !important;
-    }
-}
-
-/* Custom rocket cursor for entire website with glow effect */
-body, a, button, .dock-item, input, textarea, select {
-    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' transform='rotate(280)'><path d='M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91-.79-.78-2.08-.79-2.91-.09z' stroke='orange' stroke-width='3' /><path d='m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 5.5-5.5 11.5-11 11.5' /><path d='m15 12 3 3' /></svg>") 0 0, auto !important;
-    animation: rocketGlow 1.5s infinite !important;
-}
-
-/* Add animation for the rocket cursor glow effect */
-@keyframes rocketGlow {
-    0% { cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' transform='rotate(315)'><path d='M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91-.79-.78-2.08-.79-2.91-.09z' stroke='orange' stroke-width='3' /><path d='m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 5.5-5.5 11.5-11 11.5' /><path d='m15 12 3 3' /></svg>") 0 0, auto !important; }
-    50% { cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' transform='rotate(315)'><path d='M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91-.79-.78-2.08-.79-2.91-.09z' stroke='%23ff5500' stroke-width='7' /><path d='m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 5.5-5.5 11.5-11 11.5' /><path d='m15 12 3 3' /></svg>") 0 0, auto !important; }
-    100% { cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' transform='rotate(315)'><path d='M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91-.79-.78-2.08-.79-2.91-.09z' stroke='orange' stroke-width='3' /><path d='m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 5.5-5.5 11.5-11 11.5' /><path d='m15 12 3 3' /></svg>") 0 0, auto !important; }
 }
