@@ -6159,6 +6159,7 @@ section h2 {
 @media (max-width: 480px) {
     .mac-dock {
         width: 95% !important;
+        height:5%;
         left: 50% !important;
         transform: translateX(-50%) !important;
         right: auto !important;
@@ -6201,15 +6202,15 @@ section h2 {
 @media (max-width: 480px) {
     /* Force display of all dock items */
     .dock-item {
-        width: 10px !important;
-        height: 10px !important;
-        margin: 1px 1px !important;
+        width: 20px !important;
+        height: 20px !important;
+        margin: 3px 3px !important;
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
         opacity: 1 !important;
         visibility: visible !important;
-        border-radius: 10px !important;
+        border-radius: 20px !important;
         background-color: rgba(30, 30, 30, 0.9) !important;
         border: 1px solid rgba(255, 255, 255, 0.1) !important;
     }
@@ -6217,14 +6218,14 @@ section h2 {
     /* Make all icons larger and definitely visible */
     .dock-item svg,
     .dock-item i {
-        width: 15px !important;
-        height: 15px !important;
-        font-size: 15px !important;
+        width: 30px !important;
+        height: 30px !important;
+        font-size: 20px !important;
         opacity: 1 !important;
         visibility: visible !important;
         display: block !important;
         color: var(--color-text) !important;
-        padding: 0;
+        padding: 2px;
     }
 
     /* Extra emphasis on home and chatbot icons */
