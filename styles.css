@@ -5604,7 +5604,7 @@ section h2 {
 @media (max-width: 480px) {
     .mac-dock {
         width: 95% !important;
-        height: 7%;
+        height: 6%;
         left: 50% !important;
         transform: translateX(-50%) !important;
         right: auto !important;
@@ -5832,7 +5832,7 @@ section h2 {
         display: flex !important;
         justify-content: space-evenly !important;
         align-items: center !important;
-        gap: 50 !important;
+        gap: 5 !important;
     }
     
     .dock-item {
@@ -5889,7 +5889,7 @@ section h2 {
         display: flex !important;
         justify-content: center !important;
         align-items: center !important;
-        gap: 10px !important;
+        gap: 5px !important;
         padding: 8px 15px !important;
     }
     
