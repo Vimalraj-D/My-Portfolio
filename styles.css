@@ -6513,3 +6513,61 @@ section h2 {
         padding: 0 !important;
     }
 }
+
+@media (max-width: 480px) {
+    /* Center the mac-dock and ensure all icons are properly contained within it */
+    .mac-dock {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        gap: 5px !important;
+        padding: 8px 15px !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        position: fixed !important;
+        overflow: visible !important;
+        width: auto !important;
+        max-width: 95% !important;
+    }
+    
+    /* Make all dock items have consistent size and appearance */
+    .dock-item, #home-toggle, #chatbot-toggle {
+        width: 42px !important;
+        height: 42px !important;
+        border-radius: 15px !important;
+        background-color: rgba(30, 30, 30, 0.7) !important;
+        border: 1px solid rgba(255, 255, 255, 0.05) !important;
+        margin: 0 2px !important;
+        padding: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        position: relative !important;
+        flex: 0 0 auto !important;
+    }
+    
+    /* Make all icons have consistent size and appearance */
+    .dock-item svg, .dock-item i,
+    #home-toggle svg, #home-toggle i,
+    #chatbot-toggle svg, #chatbot-toggle i {
+        width: 24px !important;
+        height: 24px !important;
+        font-size: 24px !important;
+        color: var(--color-text) !important;
+        opacity: 1 !important;
+        position: absolute !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+    }
+    
+    /* Position the chatbot icon at the right corner */
+    #chatbot-toggle {
+        order: 999 !important;
+    }
+    
+    /* Position the home icon at the left corner */
+    #home-toggle {
+        order: -999 !important;
+    }
+}
