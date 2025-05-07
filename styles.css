@@ -6092,8 +6092,9 @@ section h2 {
 @media (max-width: 480px) {
     .mac-dock {
         width: 95% !important;
-        left: 2.5% !important;
-        right: 2.5% !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        right: auto !important;
         padding: 5px 10px;
         gap: 3px;
         justify-content: space-between;
@@ -6109,14 +6110,6 @@ section h2 {
         width: 15px !important;
         height: 15px !important;
         font-size: 15px !important;
-    }
-    
-    .chatbot-panel {
-        width: 90vw !important;
-        max-width: 90vw !important;
-        right: 5vw !important;
-        transform: translateX(0) !important;
-        left: auto !important;
     }
 }
 
