@@ -5622,7 +5622,7 @@ transform: translateY(-3px);
     .mac-dock {
         bottom: 10px;
         gap: 0px;
-        padding: 6px 10px;
+        padding: 5px 8px;
         border-radius: 16px;
         max-width: 95%;
         left: 50%;
@@ -5636,8 +5636,8 @@ transform: translateY(-3px);
     }
     
     .dock-item svg {
-        width: 18px !important;
-        height: 18px !important;
+        width: 15px !important;
+        height: 15px !important;
     }
 }
 
@@ -5646,7 +5646,7 @@ transform: translateY(-3px);
     .mac-dock {
         padding: 3px 5px;
         bottom: 5px;
-        gap: 1px;
+        gap: 0px;
         border-radius: 4px;
         max-width: 70%;
     }
@@ -5657,8 +5657,8 @@ transform: translateY(-3px);
     }
     
     .dock-item svg {
-        width: 7px;
-        height: 7px;
+        width: 6px;
+        height: 6px;
     }
     
     section {
@@ -6108,7 +6108,7 @@ section h2 {
 @media (max-width: 480px) {
     .mac-dock {
         padding: 5px 5px;
-        gap: 4px;
+        gap: 1px;
         max-width: 95% !important;
         background-color: rgba(20, 20, 20, 0.85);
     }
@@ -6265,7 +6265,7 @@ section h2 {
     .dock-item {
         width: 30px !important;
         height: 30px !important;
-        gap: 10px !important;
+        gap: 5px !important;
         margin: 3px 3px !important;
         display: flex !important;
         align-items: center !important;
