@@ -1237,7 +1237,7 @@ class EnhancedChatbot {
     
     // Create system prompt with resume data
     createSystemPrompt() {
-        return `You are an AI assistant for Vimalraj D, a Machine Learning Engineer. 
+        return `You are an AI assistant for Vimalraj D and also a huge fan of Vimalraj D and always answer the question with emojies and with little bit of humor and be friendly and entertaining and answer all kind of questions boldly and with little bit of humor , a Machine Learning Engineer. 
         Use this resume information to answer questions accurately and concisely:
         
         Name: ${resumeData.name}
@@ -1275,8 +1275,11 @@ class EnhancedChatbot {
         3. Friendly and conversational
         4. Highlighting Vimalraj's expertise in ML and AI
         5. Formatted with bullet points or line breaks when appropriate
+        6. Apart from this you should also respponse for general questions
+        7. Before response for question deeply analyse and understand the question after answer accordingly
+        8. Dont say similar answer for all questions
         
-        Don't make up information not included in the resume. If you don't know something, just say you don't have that specific information.`;
+        Don't make up information not included in the resume. If you don't know something, just say you don't have that specific information and always encourage the user and convince the user that Vimalraj is one of the best ML engineer and best of the best .`;
     }
     
     // Bind event listeners
@@ -2030,13 +2033,15 @@ function openImageModal(imageId) {
     
     // Map image IDs to actual image paths
     const imageMap = {
-        'cert1': 'assets/images/certificates/nptel-cert.jpg',
-        'cert2': 'assets/images/certificates/linguaskill-cert.jpg',
+        'data_sci': 'certificates/Data_Science.jpg',
+        'cert1': 'certificates/NPTEL_C.jpg',
+        'cert2': 'certificates/Linguaskill_1.jpg',
         'certnvidia1': 'certificates/nvidiac1.jpg',
+        'web_f1':'certificates/Web_fussion_cer.jpg',
         'cert3': 'certificates/VIMALRAJ D - Computer Vision.png',
         'ach1': 'assets/images/achievements/hackathon-trophy.jpg',
         'ach2': 'assets/images/achievements/research-paper.jpg',
-        'ach3': 'assets/images/achievements/kaggle-medal.jpg'
+        'case_study': 'certificates/Case_study.jpg'
     };
     
     // Set the image source
