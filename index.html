@@ -720,6 +720,22 @@
                     <!-- Certification 1 -->
                     <div class="certification-card project-card">
                         <div class="project-image" style="height: 150px; display: flex; align-items: center; justify-content: center; background-color: rgba(255, 1, 79, 0.1); cursor: pointer;" onclick="openImageModal('cert1')">
+                            <i class="fa-solid fa-chart-line" style="font-size: 4rem; color: var(--color-primary);"></i>
+                        </div>
+                        <div class="project-content">
+                            <h4 class="project-title">Learning Data Science: Understanding the Basics</h4>
+                            <span class="certification-issuer">LinkedIn Learning</span>
+                            <span class="certification-date">April 2024</span>
+                            <p class="project-description">Successfully completed the “Learning Data Science: Understanding the Basics” course on LinkedIn Learning, gaining foundational knowledge in data science and strengthening my tech career skills.</p>
+                            <button class="view-certificate-btn" onclick="openImageModal('data_sci')">
+                                <i class="fas fa-eye"></i>
+                                <span>View Certificate</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="certification-card project-card">
+                        <div class="project-image" style="height: 150px; display: flex; align-items: center; justify-content: center; background-color: rgba(255, 1, 79, 0.1); cursor: pointer;" onclick="openImageModal('cert1')">
                             <i class="fas fa-certificate" style="font-size: 4rem; color: var(--color-primary);"></i>
                         </div>
                         <div class="project-content">
@@ -744,7 +760,7 @@
                             <span class="certification-issuer">Linguaskill</span>
                             <span class="certification-date">2023</span>
                             <p class="project-description">B1 Level certification verifying professional communication abilities in English language.</p>
-                            <button class="view-certificate-btn" onclick="openImageModal('cert2')">
+                            <button class="view-certificate-btn" onclick="openImageModal('cert2')"  >
                                 <i class="fas fa-eye"></i>
                                 <span>View Certificate</span>
                             </button>
@@ -753,7 +769,7 @@
 
                     <div class="certification-card project-card">
                         <div class="project-image" style="height: 150px; display: flex; align-items: center; justify-content: center; background-color: rgba(255, 1, 79, 0.1); cursor: pointer;" onclick="openImageModal('certnvidia1')">
-                            <i class="fas fa-language" style="font-size: 4rem; color: var(--color-primary);"></i>
+                            <i class="fa-brands fa-galactic-republic" style="font-size: 4rem; color: var(--color-primary);"></i>
                         </div>
                         <div class="project-content">
                             <h4 class="project-title">Getting Started with AI on Jetson Nano</h4>
@@ -770,7 +786,7 @@
                     <!-- Certification 3 -->
                     <div class="certification-card project-card">
                         <div class="project-image" style="height: 150px; display: flex; align-items: center; justify-content: center; background-color: rgba(255, 1, 79, 0.1); cursor: pointer;" onclick="openImageModal('cert3')">
-                            <i class="fas fa-laptop-code" style="font-size: 4rem; color: var(--color-primary);"></i>
+                            <i class="fa-brands fa-discord" style="font-size: 4rem; color: var(--color-primary);"></i>
                         </div>
                         <div class="project-content">
                             <h4 class="project-title">Computer Vision Certification</h4>
@@ -778,6 +794,21 @@
                             <span class="certification-date">May 2025</span>
                             <p class="project-description">Design and implement convolutional neural networks (CNNs) using TensorFlow and Keras to solve complex computer vision tasks such as image classification, object detection, and segmentation.</p>
                             <button class="view-certificate-btn" onclick="openImageModal('cert3')">
+                                <i class="fas fa-eye"></i>
+                                <span>View Certificate</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="certification-card project-card">
+                        <div class="project-image" style="height: 150px; display: flex; align-items: center; justify-content: center; background-color: rgba(255, 1, 79, 0.1); cursor: pointer;" onclick="openImageModal('cert3')">
+                            <i class="fas fa-laptop-code" style="font-size: 4rem; color: var(--color-primary);"></i>
+                        </div>
+                        <div class="project-content">
+                            <h4 class="project-title">Web Fussion Meet</h4>
+                            <span class="certification-issuer">Student Research Council (MCET)</span>
+                            <span class="certification-date">August 2024</span>
+                            <p class="project-description">In the Web Fusion Workshop, I developed a machine learning model and learned how to deploy it as a web application.</p>
+                            <button class="view-certificate-btn" onclick="openImageModal('web_f1')">
                                 <i class="fas fa-eye"></i>
                                 <span>View Certificate</span>
                             </button>
@@ -827,11 +858,11 @@
                             <i class="fas fa-medal" style="font-size: 4rem; color: var(--color-primary);"></i>
                         </div>
                         <div class="project-content">
-                            <h4 class="project-title">ML Competition Finalist</h4>
-                            <span class="certification-issuer">Kaggle</span>
+                            <h4 class="project-title">Case Study</h4>
+                            <span class="certification-issuer">SGS & Ignite (MCET)</span>
                             <span class="certification-date">2023</span>
-                            <p class="project-description">Ranked in the top 5% of participants in a competitive machine learning challenge focused on predictive analytics.</p>
-                            <button class="view-certificate-btn" onclick="openImageModal('ach3')">
+                            <p class="project-description">Actively participated in the Case Study event conducted by the Science and Humanities department during Technofete'23, an intra-college technical symposium, and secured 3rd place.</p>
+                            <button class="view-certificate-btn" onclick="openImageModal('case_study')">
                                 <i class="fas fa-eye"></i>
                                 <span>View Certificate</span>
                             </button>
@@ -1013,7 +1044,7 @@
             </svg>
             <div class="dock-reflection" aria-hidden="true"></div>
         </a>
-        <button class="dock-item" id="chatbot-toggle" aria-label="Open chat assistant">
+        <a class="dock-item" id="chatbot-toggle" aria-label="Open chat assistant">
           <!-- <span class="tooltip">Ask Me</span>--> 
             <div class="chatbot-popup">
                 <!-- Popup text will be dynamically inserted here by JavaScript -->
@@ -1022,7 +1053,7 @@
                 <path d="M20 2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 16H6v-1c0-1.1.9-2 2-2h8c1.1 0 2 .9 2 2v1zm-3-4H9v-2h6v2zm2-4H7V8h10v2z"/>
             </svg>
             <div class="dock-reflection" aria-hidden="true"></div>
-        </button>
+        </a>
     </nav>
 
     <!-- Chatbot Interface -->
@@ -1107,7 +1138,7 @@
                 </a>
 
                 <!-- Kaggle -->
-                <a href="https://kaggle.com/vimalrajd" target="_blank" rel="noopener" class="social-planet kaggle" aria-label="Kaggle Profile">
+                <a href="https://www.kaggle.com/vimalrajduraisamy" target="_blank" rel="noopener" class="social-planet kaggle" aria-label="Kaggle Profile">
                     <div class="planet-orbit">
  
                         <div class="planet-body">
@@ -1188,20 +1219,6 @@
                         </div>
                     </div>
                     <div class="planet-name">X</div>
-                </a>
-
-                <!-- Email -->
-                <a href="mailto:vimalrajd2005@gmail.com" class="social-planet email" aria-label="Email Contact">
-                    <div class="planet-orbit">
-
-                        <div class="planet-body">
-
-                            <div class="planet-icon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="planet-name">Email</div>
                 </a>
             </div>
         </div>
