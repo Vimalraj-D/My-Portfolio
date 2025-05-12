@@ -4485,7 +4485,7 @@ transform: translateY(-3px);
   z-index: 2;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 550px) {
   .chatbot-popup {
     position: absolute;
     right: 0px;              /* Anchor to the right side of screen */
@@ -4502,7 +4502,7 @@ transform: translateY(-3px);
     content: "";
     position: absolute;
     bottom: -8px;
-    right: 30px;
+    left: 90px;
     transform:  translateX(50%) rotate(0deg);
     box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.1);
   }
