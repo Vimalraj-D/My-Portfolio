@@ -2534,6 +2534,9 @@ img {
 /* Position the chatbot toggle button */
 #chatbot-toggle {
   position: relative;
+  padding: 10px;
+  width: 50px;
+  height: 50px;
   background-color: rgba(30, 30, 30, 0.7);
   border: 1px solid rgba(255, 255, 255, 0.05);
   box-shadow: none;
@@ -2554,7 +2557,7 @@ img {
 
 .chatbot-popup {
   position: absolute;
-  bottom: 80px;
+  bottom: 70px;
   left: 10%;
   transform: translateX(-50%);
   background-color: rgba(255, 0, 0, 0.9);
@@ -2570,6 +2573,9 @@ img {
   z-index: 101;
   max-width: 150px;
   text-align: center;
+  white-space: nowrap;
+  direction: ltr;
+  text-align: left;
 }
 
 .chatbot-popup:after {
@@ -2979,7 +2985,7 @@ img {
         transform: translateX(50%);
         width: 50%;
         max-width: none;
-      bottom: 75px;
+      bottom: 85px;
     }
     
     .chatbot-popup {
@@ -2989,7 +2995,7 @@ img {
 }
 
     .chatbot-popup:after{
-        left: 80%;
+        left: 70%;
     }
     
     .social-grid {
@@ -4479,20 +4485,33 @@ transform: translateY(-3px);
   z-index: 2;
 }
 
-/* Fix chatbot popup on mobile */
 @media (max-width: 480px) {
   .chatbot-popup {
-    right: 60px;
-    margin-left:300px ;
-    transform: translateX(50%);
+    position: absolute;
+    right: 0px;              /* Anchor to the right side of screen */
+    left: auto;               /* Ensure left is not interfering */
     bottom: 60px;
+    direction: ltr;           /* Text stays left-to-right readable */
+    text-align: left;
+    white-space: nowrap;
+    display: inline-block;
+    transform: translateX(-100%);  /* This is key: shift popup to the left */
   }
-  
+
   .chatbot-popup:after {
-    right: 60px;
-    transform: translateX(50%) rotate(45deg);
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    right: 30px;
+    transform:  translateX(50%) rotate(0deg);
+    box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.1);
+  }
+
+  .popup-text::after {
+    direction: ltr;
   }
 }
+
 
 /* Social Planets with Theme Gradient Background and Colored Icons */
 .social-planet .planet-body {
@@ -4854,7 +4873,8 @@ section h2 {
 
 @media (max-width: 480px) {
     .chatbot-panel {
-        width: 78vw !important;
+      height: 100vw;
+        width: 68vw !important;
         max-width: 78vw !important;
     }
     .quick-reply {
@@ -4907,15 +4927,18 @@ section h2 {
     height: 30px !important;
     margin: 0 1px !important;
 }
+#chatbot-toggle {
+    width: 40px !important;
+    height: 40px !important;
+  }
 }
-
 
 .chatbot {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50px;
-    height: 50px;
+    width: 44px;
+    height: 44px;
     border-radius: 10px;
     background-color: rgba(30, 30, 30, 0.7);
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
