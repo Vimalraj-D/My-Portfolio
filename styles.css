@@ -2543,6 +2543,9 @@ img {
 #chatbot-toggle svg {
   color: var(--color-text-muted);
   transition: color 0.3s ease;
+  min-width: 34px;
+  min-height: 34px;
+  width: 34px;  
 }
 
 #chatbot-toggle:hover svg {
@@ -2551,7 +2554,7 @@ img {
 
 .chatbot-popup {
   position: absolute;
-  bottom: 70px;
+  bottom: 80px;
   left: 10%;
   transform: translateX(-50%);
   background-color: rgba(255, 0, 0, 0.9);
@@ -2565,7 +2568,7 @@ img {
   border: 1px solid var(--color-primary-alt);
   pointer-events: none;
   z-index: 101;
-  min-width: 120px;
+  max-width: 150px;
   text-align: center;
 }
 
@@ -2690,14 +2693,14 @@ img {
   display: flex;
   flex-wrap: wrap;
     gap: 8px;
-    padding: 10px 15px;
+    padding: 10px 10px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .quick-reply {
     background: rgba(255, 255, 255, 0.1);
     border: none;
-    padding: 6px 10px;
+    padding: 6px 6px;
     border-radius: 15px;
   color: var(--color-text);
     font-size: 0.75rem;
@@ -2742,6 +2745,11 @@ img {
 }
 
 @media (max-width: 768px) {
+
+    #chatbot-toggle{
+      border-radius: 30px;
+    }
+
     .chatbot-panel {
         width: 85%;
         background: rgba(26, 26, 26, 0.65);
@@ -2975,8 +2983,7 @@ img {
     }
     
     .chatbot-popup {
-        right: auto;
-        left: 350%;
+        left: 50%;
         transform: translateX(-50%);
         bottom: 70px;
 }
@@ -4475,13 +4482,14 @@ transform: translateY(-3px);
 /* Fix chatbot popup on mobile */
 @media (max-width: 480px) {
   .chatbot-popup {
-    left: 50%;
+    right: 60px;
+    margin-left:300px ;
     transform: translateX(50%);
     bottom: 60px;
   }
   
   .chatbot-popup:after {
-    left: 50%;
+    right: 60px;
     transform: translateX(50%) rotate(45deg);
   }
 }
@@ -4851,7 +4859,6 @@ section h2 {
     }
     .quick-reply {
         font-size: 0.55rem !important;
-        padding: 2px 4px !important;
     }
 }
 
@@ -4868,14 +4875,13 @@ section h2 {
     100% { transform: rotate(360deg); }
 }
 
-
-
 @media (max-width: 480px) {
     .quick-reply {
         font-size: 0.50rem !important;
         padding: 2px 2px !important;
-        margin: 0 2px 3px 0 !important;
-        min-width: auto !important;
+        margin: 0 2px 2px 0 !important;
+        max-width: 15px;
+        max-height: 5px !important;
         border-radius: 10px !important;
     }
     
@@ -4889,10 +4895,10 @@ section h2 {
 @media (max-width: 480px) {
   .mac-dock{
     bottom: 10px;
-    gap: 0px;
+    gap: 2px;
     padding: 6px 10px;
     border-radius: 16px;
-    max-width: 95%;
+    max-width: 98%;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -4917,22 +4923,4 @@ section h2 {
     overflow: visible;
     margin: 0 2px;
     border: 1px solid rgba(240, 171, 171, 0.05);
-}
-@media (max-width: 480px){
-    .chatbot{
-        width: 40px;
-        height: 40px;
-        border-radius: 50% !important;
-        background-color: rgba(30, 30, 30, 0.7);
-        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        position: relative;
-        overflow: visible;
-        margin: 0 2px;
-        border: 1px solid rgba(255, 255, 255, 0.05);
-    }
-    .chatbot svg {
-        width: 200px;
-        height: 200px;
-        margin: 0 1px !important;
-     }
 }
