@@ -1130,12 +1130,12 @@ class EnhancedChatbot {
         
         // Popup messages
         this.popupMessages = [
-            "Can I help you?",
+            "Can I  help you?",
             "Need assistance?",
             "Ask me anything",
-            "AI assistance",
-            "Chat with me",
-            "Have questions?",
+            "AI   assistance",
+            "Chat  with   me",
+            "Have  questions?",
             "I'm here to help"
         ];
         this.currentPopupIndex = 0;
