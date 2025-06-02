@@ -1092,9 +1092,9 @@ const resumeData = {
     experience: [
         {
             title: "Machine Learning Intern",
-            company: "Unified Mentor",
-            duration: "1 Month",
-            date: "Sept 2024 - Oct 2024",
+            company: "Cube AI solutions",
+            duration: "Present",
+            date: "Feb 2025 - present",
             description: "Developed and optimized machine learning models for real-world applications. Applied deep learning techniques, including CNN using PyTorch."
         }
     ],
@@ -1130,13 +1130,13 @@ class EnhancedChatbot {
         
         // Popup messages
         this.popupMessages = [
-            "Can I  help you?",
-            "Need assistance?",
-            "Ask me anything",
-            "AI   assistance",
-            "Chat  with   me",
-            "Have  questions?",
-            "I'm here to help"
+            "Can I help you?",
+            "Need assist?",
+            "Let's talk",
+            "AI assist",
+            "Chat with me",
+            "Have questions?",
+            "Let's chat"
         ];
         this.currentPopupIndex = 0;
         this.popupCycleInterval = null;
