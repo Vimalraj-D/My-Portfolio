@@ -1115,7 +1115,7 @@ const resumeData = {
 class EnhancedChatbot {
     constructor() {
         // Together API details
-        this.TOGETHER_API_KEY = "tgp_v1_M8yz4zamZDdw3cCNvFqK2lBl1kjLv76bhoVASd3guqM";
+        this.TOGETHER_API_KEY = "tgp_v1_nmswViZzIZD1L_DwgUT00NtvRoyGg8CHBJ3a9J_0Rxw";
         this.MODEL = "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8";
         
         // DOM elements
@@ -1136,7 +1136,7 @@ class EnhancedChatbot {
             "AI assistance..",
             "Chat with me...",
             "Any question?",
-            "Ready to help"
+            "Ready to help!"
         ];
         this.currentPopupIndex = 0;
         this.popupCycleInterval = null;
