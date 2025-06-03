@@ -1135,8 +1135,8 @@ class EnhancedChatbot {
             "Talk with me...",
             "AI assistance..",
             "Chat with me...",
-            "Have questions?",
-            "Let's chat....."
+            "Any question?",
+            "Ready to help"
         ];
         this.currentPopupIndex = 0;
         this.popupCycleInterval = null;
