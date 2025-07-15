@@ -1034,7 +1034,7 @@ img {
   animation: pulse 2s infinite;
 }
 
-/* Responsive Adjustments */
+
 @media (max-width: 1200px) {
   .about-content-list, .about-vision-list {
     grid-template-columns: 1fr 1fr;
